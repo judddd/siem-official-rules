@@ -1,0 +1,11 @@
+.agents/
+.claude/
+agent/
+skills-lock.json
+.DS_Store
+exchange-custom-rules/
+jumpserver-*/
+packages/
+qizhi/
+**/.cache/
+**/__pycache__/

@@ -1,0 +1,1014 @@
+{
+  "rules": {
+    "931e25a5-0f5e-4ae0-ba0d-9e94eff7e3a4": {
+      "kind": "official_zh",
+      "category": "cross-platform",
+      "stem": "privilege_escalation_sudoers_file_mod",
+      "official_relpath": "rules/cross-platform/privilege_escalation_sudoers_file_mod.toml",
+      "official_snapshot": {
+        "name": "Sudoers File Activity",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "9e9207f72215e4f04beb5ceb12f2e29af786b65061151807044b8c2415275dec"
+      },
+      "localized_at": "2026-09-15T06:09:12.284Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "931e25a5-0f5e-4ae0-ba0d-9e94eff7e3a4"
+    },
+    "d7d5c059-c19a-4a96-8ae3-41496ef3bcf9": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "credential_access_ml_auth_spike_in_logon_events",
+      "official_relpath": "rules/ml/credential_access_ml_auth_spike_in_logon_events.toml",
+      "official_snapshot": {
+        "name": "Spike in Logon Events",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "962a7dddd6dd2a16ebb7f3a21fed8c998721a50a835da7a23114b5427c6e0005"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "d7d5c059-c19a-4a96-8ae3-41496ef3bcf9"
+    },
+    "e26aed74-c816-40d3-a810-48d6fbd8b2fd": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "credential_access_ml_auth_spike_in_logon_events_from_a_source_ip",
+      "official_relpath": "rules/ml/credential_access_ml_auth_spike_in_logon_events_from_a_source_ip.toml",
+      "official_snapshot": {
+        "name": "Spike in Successful Logon Events from a Source IP",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "f0834d2038859c78671a94f3f622ea0ce12cf22f7b333e0d328ea0738eb90e18"
+      },
+      "localized_at": "2026-09-15T06:08:44.746Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "e26aed74-c816-40d3-a810-48d6fbd8b2fd"
+    },
+    "745b0119-0560-43ba-860a-7235dd8cee8d": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "initial_access_ml_auth_rare_hour_for_a_user_to_logon",
+      "official_relpath": "rules/ml/initial_access_ml_auth_rare_hour_for_a_user_to_logon.toml",
+      "official_snapshot": {
+        "name": "Unusual Hour for a User to Logon",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "7a717a4169d745d078a3dec70fcc2e9a365cc1e5f770ab12108be7f9ecfaa72e"
+      },
+      "localized_at": "2026-09-15T06:08:51.840Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "745b0119-0560-43ba-860a-7235dd8cee8d"
+    },
+    "1781d055-5c66-4adf-9c59-fc0fa58336a5": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "initial_access_ml_windows_anomalous_user_name",
+      "official_relpath": "rules/ml/initial_access_ml_windows_anomalous_user_name.toml",
+      "official_snapshot": {
+        "name": "Unusual Windows Username",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "497e9cc524d7c04f63d867a2fcb333d5d30294602977c14999a34b460b47f086"
+      },
+      "localized_at": "2026-09-15T06:08:23.520Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "1781d055-5c66-4adf-9c59-fc0fa58336a5"
+    },
+    "1e9fc667-9ff1-4b33-9f40-fefca8537eb0": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "privilege_escalation_ml_linux_anomalous_sudo_activity",
+      "official_relpath": "rules/ml/privilege_escalation_ml_linux_anomalous_sudo_activity.toml",
+      "official_snapshot": {
+        "name": "Unusual Sudo Activity",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "b8667775bcda7d563b2cc72346d693f134b51a2c091c256e03131fe92123cce9"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "1e9fc667-9ff1-4b33-9f40-fefca8537eb0"
+    },
+    "b347b919-665f-4aac-b9e8-68369bf2340c": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "initial_access_ml_linux_anomalous_user_name",
+      "official_relpath": "rules/ml/initial_access_ml_linux_anomalous_user_name.toml",
+      "official_snapshot": {
+        "name": "Unusual Linux Username",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "0056a0635974e979d8df5d2cc3642accd3889e00b1a56f85774ab2bb3b8ca5b2"
+      },
+      "localized_at": "2026-09-15T06:08:18.445Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "b347b919-665f-4aac-b9e8-68369bf2340c"
+    },
+    "99dcf974-6587-4f65-9252-d866a3fdfd9c": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "credential_access_ml_auth_spike_in_failed_logon_events",
+      "official_relpath": "rules/ml/credential_access_ml_auth_spike_in_failed_logon_events.toml",
+      "official_snapshot": {
+        "name": "Spike in Failed Logon Events",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "54c77b2222ac7e856a282dbb6d824b8ca2ce94e98e207761bf9ac863352a8492"
+      },
+      "localized_at": "2026-09-15T06:08:53.155Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "99dcf974-6587-4f65-9252-d866a3fdfd9c"
+    },
+    "d4b73fa0-9d43-465e-b8bf-50230da6718b": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "initial_access_ml_auth_rare_source_ip_for_a_user",
+      "official_relpath": "rules/ml/initial_access_ml_auth_rare_source_ip_for_a_user.toml",
+      "official_snapshot": {
+        "name": "Unusual Source IP for a User to Logon from",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "f96fc175e451d0edde7ab9df719b08be9d0c672df8cbc1b644711d751f68ce60"
+      },
+      "localized_at": "2026-09-15T06:08:19.479Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "d4b73fa0-9d43-465e-b8bf-50230da6718b"
+    },
+    "1781d055-5c66-4adf-9e93-fc0fa69550c9": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "initial_access_ml_windows_rare_user_type10_remote_login",
+      "official_relpath": "rules/ml/initial_access_ml_windows_rare_user_type10_remote_login.toml",
+      "official_snapshot": {
+        "name": "Unusual Windows Remote User",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "c3d1fac8af5755c2cbd88d8d3b334c064882febc18dae7c9f94004e976a4fecc"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "1781d055-5c66-4adf-9e93-fc0fa69550c9"
+    },
+    "4330272b-9724-4bc6-a3ca-f1532b81e5c2": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "credential_access_ml_suspicious_login_activity",
+      "official_relpath": "rules/ml/credential_access_ml_suspicious_login_activity.toml",
+      "official_snapshot": {
+        "name": "Unusual Login Activity",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "559112b3f5eaf9bf60d7631d1b78286e585724e61bc854bef116a41b3b1d78b1"
+      },
+      "localized_at": "2026-09-15T06:08:17.788Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "4330272b-9724-4bc6-a3ca-f1532b81e5c2"
+    },
+    "138c5dd5-838b-446e-b1ac-c995c7f8108a": {
+      "kind": "official_zh",
+      "category": "ml",
+      "stem": "initial_access_ml_auth_rare_user_logon",
+      "official_relpath": "rules/ml/initial_access_ml_auth_rare_user_logon.toml",
+      "official_snapshot": {
+        "name": "Rare User Logon",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "43dc5145a2d744aafb5ce550040990af39a8ac7ff745b8d21833422e1e739332"
+      },
+      "localized_at": "2026-09-15T06:09:08.084Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "138c5dd5-838b-446e-b1ac-c995c7f8108a"
+    },
+    "e4c5d6e7-f8a9-4012-b3c4-d5e6f7a80912": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "credential_access_auditd_sensitive_cloud_and_host_identity_file_open",
+      "official_relpath": "rules/linux/credential_access_auditd_sensitive_cloud_and_host_identity_file_open.toml",
+      "official_snapshot": {
+        "name": "Sensitive Identity File Open by Suspicious Process via Auditd",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "f805ccd8829094ae956820ab8517c919150f857dd8221f2002db73a9c7eee4aa"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "e4c5d6e7-f8a9-4012-b3c4-d5e6f7a80912"
+    },
+    "afd04601-12fc-4149-9b78-9c3f8fe45d39": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "command_and_control_cat_network_activity",
+      "official_relpath": "rules/linux/command_and_control_cat_network_activity.toml",
+      "official_snapshot": {
+        "name": "Network Activity Detected via cat",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "c7ee90fd3586b37666a9f11c3f3289d00ce4b9ceb17d4cddbd2f06e9fe0b0d5e"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "afd04601-12fc-4149-9b78-9c3f8fe45d39"
+    },
+    "edfd5ca9-9d6c-44d9-b615-1e56b920219c": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "persistence_linux_user_account_creation",
+      "official_relpath": "rules/linux/persistence_linux_user_account_creation.toml",
+      "official_snapshot": {
+        "name": "Linux User Account Creation",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "4e635603133439ae4c86977bdaeb59ff0f0efc90f5ca83c67abc47a2128bb1da"
+      },
+      "localized_at": "2026-09-16T01:45:04.627Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "edfd5ca9-9d6c-44d9-b615-1e56b920219c"
+    },
+    "ef35b103-7fca-4af4-879d-a7e73c918659": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "command_and_control_elastic_endpoint_shell_execution",
+      "official_relpath": "rules/linux/command_and_control_elastic_endpoint_shell_execution.toml",
+      "official_snapshot": {
+        "name": "Shell Execution via Elastic Endpoint",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "197f6100542bb1bc4fe501e6ce4551b1fe56a9af51a7935e6fc98f76282fc53a"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "ef35b103-7fca-4af4-879d-a7e73c918659"
+    },
+    "1c27fa22-7727-4dd3-81c0-de6da5555feb": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "credential_access_potential_linux_ssh_bruteforce_internal",
+      "official_relpath": "rules/linux/credential_access_potential_linux_ssh_bruteforce_internal.toml",
+      "official_snapshot": {
+        "name": "Potential Internal Linux SSH Brute Force Detected",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "d5240e5f75788c770c1821af9dab848cff499a71fb2ede3a00e90cdf77f43682"
+      },
+      "localized_at": "2026-09-15T06:08:49.737Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "1c27fa22-7727-4dd3-81c0-de6da5555feb"
+    },
+    "5c495612-9992-49a7-afe3-0f647671fb60": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "initial_access_successful_ssh_authentication_by_unusual_ip",
+      "official_relpath": "rules/linux/initial_access_successful_ssh_authentication_by_unusual_ip.toml",
+      "official_snapshot": {
+        "name": "Successful SSH Authentication from Unusual IP Address",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "4933332f49d49053ea406e8e09f54ac47662c04d4caedeae8fb7d22bd8f27ec4"
+      },
+      "localized_at": "2026-09-15T06:08:58.915Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "5c495612-9992-49a7-afe3-0f647671fb60"
+    },
+    "fa210b61-b627-4e5e-86f4-17e8270656ab": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "credential_access_potential_linux_ssh_bruteforce_external",
+      "official_relpath": "rules/linux/credential_access_potential_linux_ssh_bruteforce_external.toml",
+      "official_snapshot": {
+        "name": "Potential External Linux SSH Brute Force Detected",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "a3837780a800cc9745a45e65eb57b51cf92e448219b62f0625509c42ad3b6b77"
+      },
+      "localized_at": "2026-09-15T06:08:37.678Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "fa210b61-b627-4e5e-86f4-17e8270656ab"
+    },
+    "9e81b1fd-e9fb-49a7-8ebe-0d1a14090142": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "credential_access_potential_password_spraying_attack",
+      "official_relpath": "rules/linux/credential_access_potential_password_spraying_attack.toml",
+      "official_snapshot": {
+        "name": "Potential Password Spraying Attack via SSH",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "d002e628df835e6e69186bcfec547aef8db511df56f9168f4d01a30652a51d87"
+      },
+      "query_override": "from logs-system.auth-* metadata _id, _index, _version\n\n// Create 5-minute time buckets\n| eval Esql.time_window_date_trunc = date_trunc(5 minutes, @timestamp)\n\n// Ensure event.action values in a list are expanded\n| mv_expand event.action \n\n| where\n  event.category == \"authentication\" and event.action in (\"ssh_login\", \"user_login\") and event.outcome == \"failure\" and\n  source.ip is not null \n\n| keep\n   @timestamp,\n   _id,\n   _index,\n   _version,\n   host.name,\n   host.id,\n   event.category,\n   event.action,\n   event.outcome,\n   source.ip,\n   process.name,\n   user.name,\n   message,\n   data_stream.dataset,\n   data_stream.namespace,\n   agent.id,\n   user.id,\n   Esql.time_window_date_trunc\n\n| stats\n  Esql.event_count = count(*),\n  Esql.user_name_count_distinct = count_distinct(user.name),\n  Esql.user_name_values = values(user.name),\n  Esql.host_name_values = values(host.name),\n  Esql.host_id_values = values(host.id),\n  Esql.agent_id_values = values(agent.id),\n  Esql.process_name_values = values(process.name),\n  Esql.message_values = values(message),\n  Esql.data_stream_dataset_values = values(data_stream.dataset),\n  Esql.data_stream_namespace_values = values(data_stream.namespace)\n  by Esql.time_window_date_trunc, source.ip\n\n| where Esql.user_name_count_distinct > 10 and Esql.event_count >= 30\n| eval host.name = MV_FIRST(Esql.host_name_values),\n       user.name = MV_FIRST(Esql.user_name_values),\n       agent.id = MV_FIRST(Esql.agent_id_values)\n| KEEP source.ip, host.name, user.name, agent.id, Esql.time_window_date_trunc, Esql.*\n",
+      "localized_at": "2026-09-15T06:09:00.621Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "9e81b1fd-e9fb-49a7-8ebe-0d1a14090142"
+    },
+    "44a2de72-fe41-4558-b7ec-3e42de5f0432": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "command_and_control_dns_query_to_sus_top_level_domain",
+      "official_relpath": "rules/linux/command_and_control_dns_query_to_sus_top_level_domain.toml",
+      "official_snapshot": {
+        "name": "Unusual DNS Request to Suspicious Top Level Domain",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "c7779ea95cada947e94782d84607d6a5c095bf9697884b397d9ae71665e3d385"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "44a2de72-fe41-4558-b7ec-3e42de5f0432"
+    },
+    "3ee526ce-1f26-45dd-9358-c23100d1121f": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "collection_potential_audio_recording_activity",
+      "official_relpath": "rules/linux/collection_potential_audio_recording_activity.toml",
+      "official_snapshot": {
+        "name": "Linux Audio Recording Activity Detected",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "d2dee7173dcb1931494cb58057dc97de15201fed25e0deb1df5c4fac92a9d173"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "3ee526ce-1f26-45dd-9358-c23100d1121f"
+    },
+    "e80ee207-9505-49ab-8ca8-bc57d80e2cab": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "command_and_control_cupsd_foomatic_rip_netcon",
+      "official_relpath": "rules/linux/command_and_control_cupsd_foomatic_rip_netcon.toml",
+      "official_snapshot": {
+        "name": "Network Connection by Cups or Foomatic-rip Child",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "60fd1f5d85f48efb07aae3a9f5838b6a8d80aa3a524741a55b82f95a8738aed0"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "e80ee207-9505-49ab-8ca8-bc57d80e2cab"
+    },
+    "e7cb3cfd-aaa3-4d7b-af18-23b89955062c": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "credential_access_credential_dumping",
+      "official_relpath": "rules/linux/credential_access_credential_dumping.toml",
+      "official_snapshot": {
+        "name": "Potential Linux Credential Dumping via Unshadow",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "fe4481e783b26523d761f959f898ee43dd04d09bf6a7818f0a7760f075d57722"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "e7cb3cfd-aaa3-4d7b-af18-23b89955062c"
+    },
+    "884e87cc-c67b-4c90-a4ed-e1e24a940c82": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "collection_linux_clipboard_activity",
+      "official_relpath": "rules/linux/collection_linux_clipboard_activity.toml",
+      "official_snapshot": {
+        "name": "Linux Clipboard Activity Detected",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "cfca475a98809e2023fa770be37328e795ce0a1d43b909f4d94d39a54bb556f8"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "884e87cc-c67b-4c90-a4ed-e1e24a940c82"
+    },
+    "5b8d7b94-23c6-4e3f-baed-3a4d0da4f19d": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "initial_access_successful_ssh_authentication_by_unusual_user",
+      "official_relpath": "rules/linux/initial_access_successful_ssh_authentication_by_unusual_user.toml",
+      "official_snapshot": {
+        "name": "Successful SSH Authentication from Unusual User",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "7ca2a6cea6c4df0d9e4af3f6e1286ccc4cc735aa94934751485a64bfcb0b332d"
+      },
+      "localized_at": "2026-09-15T06:08:55.918Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "5b8d7b94-23c6-4e3f-baed-3a4d0da4f19d"
+    },
+    "43d6ec12-2b1c-47b5-8f35-e9de65551d3b": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "persistence_linux_user_added_to_privileged_group",
+      "official_relpath": "rules/linux/persistence_linux_user_added_to_privileged_group.toml",
+      "official_snapshot": {
+        "name": "Linux User Added to Privileged Group",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "617fcc3b6458b5ac4d9028faa6c63e7e1b4d82e20e67e2945fb7138743b839ca"
+      },
+      "localized_at": "2026-09-15T06:08:43.771Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "43d6ec12-2b1c-47b5-8f35-e9de65551d3b"
+    },
+    "428e9109-dc13-4ae9-84cb-100464d4c6fa": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "persistence_ssh_via_backdoored_system_user",
+      "official_relpath": "rules/linux/persistence_ssh_via_backdoored_system_user.toml",
+      "official_snapshot": {
+        "name": "Unusual Login via System User",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "1bdcdbc912319b832fe08172ae07a105de2f55464954c9620e7428e58594beab"
+      },
+      "localized_at": "2026-09-15T06:09:18.211Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "428e9109-dc13-4ae9-84cb-100464d4c6fa"
+    },
+    "e7b2c3d4-5a6b-4e8f-9c0d-1a2b3e4f5a6b": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "command_and_control_auditd_curl_wget_from_container",
+      "official_relpath": "rules/linux/command_and_control_auditd_curl_wget_from_container.toml",
+      "official_snapshot": {
+        "name": "Curl or Wget Execution from Container Context",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "3b992951a0f56020ed1e4ed2a7c102e03bd8dd331c111d48b44ff1733d8a1c9c"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "e7b2c3d4-5a6b-4e8f-9c0d-1a2b3e4f5a6b"
+    },
+    "349276c0-5fcf-11ef-b1a9-f661ea17fbce": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "command_and_control_aws_cli_endpoint_url_used",
+      "official_relpath": "rules/linux/command_and_control_aws_cli_endpoint_url_used.toml",
+      "official_snapshot": {
+        "name": "AWS CLI Command with Custom Endpoint URL",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "c6536a0eeaa6457cd85272721ca3ef0243f28b2672e9a67b98c1d17cb68921b6"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "349276c0-5fcf-11ef-b1a9-f661ea17fbce"
+    },
+    "835c0622-114e-40b5-a346-f843ea5d01f1": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "credential_access_potential_linux_local_account_bruteforce",
+      "official_relpath": "rules/linux/credential_access_potential_linux_local_account_bruteforce.toml",
+      "official_snapshot": {
+        "name": "Potential Linux Local Account Brute Force Detected",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "6f22cbc037095f8609b8ccb349ed7fe50eb2a459ee10c02bc978ae05588ee522"
+      },
+      "query_override": "from logs-endpoint.events.process* metadata _id, _index, _version\n\n// Create 1-minute time buckets\n| eval Esql.time_window_date_trunc = date_trunc(1 minute, @timestamp)\n\n// Ensure event.action values in a list are expanded\n| mv_expand event.action \n\n| where\n  event.category == \"process\" and event.type == \"start\" and event.action == \"exec\" and process.name == \"su\" and \n  process.parent.name not in (\n    \"bash\", \"dash\", \"ash\", \"sh\", \"tcsh\", \"csh\", \"zsh\", \"ksh\", \"fish\", \"clickhouse-server\", \"ma\", \"gitlab-runner\",\n    \"updatedb.findutils\", \"cron\", \"perl\", \"sudo\", \"java\", \"cloud-app-identify\", \"ambari-sudo.sh\", \"runc\",\n    \"cau9sat.exe\", \"git-pull.sh\", \"distributor-pulltabs-devel-live\", \"p_ctmag\", \"backup_agent_main\", \"sshd\",\n    \"nxpgsql\", \"cau9cli.exe\", \"autopostgresqlbackup\"\n  ) and\n  not process.parent.command_line == \"runc init\"\n\n| keep\n   @timestamp,\n   host.name,\n   event.action,\n   event.category,\n   event.type,\n   process.name,\n   process.parent.name,\n   process.parent.command_line,\n   process.command_line,\n   user.name,\n   data_stream.dataset,\n   data_stream.namespace,\n   process.parent.executable,\n   agent.id,\n   user.id,\n   Esql.time_window_date_trunc\n\n| stats\n  Esql.event_count = count(*),\n  Esql.process_command_line_values = values(process.command_line),\n  Esql.process_parent_command_line_values = values(process.parent.command_line),\n  Esql.process_parent_name_values = values(process.parent.name),\n  Esql.user_name_values = values(user.name),\n  Esql.host_name_values = values(host.name),\n  Esql.data_stream_dataset_values = values(data_stream.dataset),\n  Esql.data_stream_namespace_values = values(data_stream.namespace)\n  by process.parent.executable, agent.id, user.id, Esql.time_window_date_trunc\n\n| where Esql.event_count >= 10\n| eval host.name = MV_FIRST(Esql.host_name_values),\n       user.name = MV_FIRST(Esql.user_name_values),\n       process.name = \"su\",\n       process.parent.name = MV_FIRST(Esql.process_parent_name_values)\n| KEEP host.name, user.name, user.id, agent.id, process.name, process.parent.executable, process.parent.name, Esql.time_window_date_trunc, Esql.*\n",
+      "localized_at": "2026-09-16T01:57:06.916Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "835c0622-114e-40b5-a346-f843ea5d01f1"
+    },
+    "8f8004e1-0783-485f-a3da-aca4362f74a7": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "defense_evasion_user_or_group_deletion",
+      "official_relpath": "rules/linux/defense_evasion_user_or_group_deletion.toml",
+      "official_snapshot": {
+        "name": "Linux User or Group Deletion",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "97881912beea02affac7816e27b4fae44ba2702a2db987904f4afeaa20abb77e"
+      },
+      "localized_at": "2026-09-16T01:46:31.657Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "8f8004e1-0783-485f-a3da-aca4362f74a7"
+    },
+    "494ebba4-ecb7-4be4-8c6f-654c686549ad": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "persistence_linux_backdoor_user_creation",
+      "official_relpath": "rules/linux/persistence_linux_backdoor_user_creation.toml",
+      "official_snapshot": {
+        "name": "Potential Linux Backdoor User Account Creation",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "8e7ac868ceddeec703f33eab3dd4167606461ea72c1ff73a2e41143e303fd070"
+      },
+      "localized_at": "2026-09-15T06:08:42.864Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "494ebba4-ecb7-4be4-8c6f-654c686549ad"
+    },
+    "93dd73f9-3e59-45be-b023-c681273baf81": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "collection_potential_video_recording_or_screenshot_activity",
+      "official_relpath": "rules/linux/collection_potential_video_recording_or_screenshot_activity.toml",
+      "official_snapshot": {
+        "name": "Linux Video Recording or Screenshot Activity Detected",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "cd112b5e66610198613bb18f42eeaf191e6477f1ca5d438714d3cc95633a8ae0"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "93dd73f9-3e59-45be-b023-c681273baf81"
+    },
+    "79e7291f-9e3b-4a4b-9823-800daa89c8f9": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "persistence_user_credential_modification_via_echo",
+      "official_relpath": "rules/linux/persistence_user_credential_modification_via_echo.toml",
+      "official_snapshot": {
+        "name": "Linux User Account Credential Modification",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "527be2ed1be7ce46ae7c7f327535f06a2eee72981bc016698ba1797671dfca66"
+      },
+      "localized_at": "2026-09-15T06:09:19.246Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "79e7291f-9e3b-4a4b-9823-800daa89c8f9"
+    },
+    "734239fe-eda8-48c0-bca8-9e3dafd81a88": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "command_and_control_curl_socks_proxy_detected",
+      "official_relpath": "rules/linux/command_and_control_curl_socks_proxy_detected.toml",
+      "official_snapshot": {
+        "name": "Curl SOCKS Proxy Activity from Unusual Parent",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "7da4930777ed14fb0af6687920d4c31d2050b992462cd6b2a076d09ebb42b22f"
+      },
+      "localized_at": "2026-09-21T08:34:06Z",
+      "source": "manual",
+      "rule_id": "734239fe-eda8-48c0-bca8-9e3dafd81a88"
+    },
+    "a1c2589e-0c8c-4ca8-9eb6-f83c4bbdbe8f": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "persistence_linux_group_creation",
+      "official_relpath": "rules/linux/persistence_linux_group_creation.toml",
+      "official_snapshot": {
+        "name": "Linux Group Creation",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "5f16693cd4e147742fe482b88d06cf1a403a7166766e7d2b3feb2240a1601f3a"
+      },
+      "localized_at": "2026-09-16T01:46:03.647Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "a1c2589e-0c8c-4ca8-9eb6-f83c4bbdbe8f"
+    },
+    "8cb84371-d053-4f4f-bce0-c74990e28f28": {
+      "kind": "official_zh",
+      "category": "linux",
+      "stem": "credential_access_potential_successful_linux_ssh_bruteforce",
+      "official_relpath": "rules/linux/credential_access_potential_successful_linux_ssh_bruteforce.toml",
+      "official_snapshot": {
+        "name": "Potential Successful SSH Brute Force Attack",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "13c49f2f6ee70d22e34a97d6c0b83cb33dca5258688d35c10bd34a053bd67c37"
+      },
+      "localized_at": "2026-09-15T06:08:32.956Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "8cb84371-d053-4f4f-bce0-c74990e28f28"
+    },
+    "2820c9c2-bcd7-4d6e-9eba-faf3891ba450": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "persistence_remote_password_reset",
+      "official_relpath": "rules/windows/persistence_remote_password_reset.toml",
+      "official_snapshot": {
+        "name": "Account Password Reset Remotely",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "00bf9a68dcc87ab7cb226633030b77478331deef0367e759b378b5538fa6deea"
+      },
+      "localized_at": "2026-09-15T06:08:36.630Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "2820c9c2-bcd7-4d6e-9eba-faf3891ba450"
+    },
+    "3bc6deaa-fbd4-433a-ae21-3e892f95624f": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "credential_access_copy_ntds_sam_volshadowcp_cmdline",
+      "official_relpath": "rules/windows/credential_access_copy_ntds_sam_volshadowcp_cmdline.toml",
+      "official_snapshot": {
+        "name": "NTDS or SAM Database File Copied",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "b037b1051f95333667b5085c27d523b9f6d2ca11115c92f4f6f2e927c7785d99"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "3bc6deaa-fbd4-433a-ae21-3e892f95624f"
+    },
+    "291a0de9-937a-4189-94c0-3e847c8b13e4": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "discovery_privileged_localgroup_membership",
+      "official_relpath": "rules/windows/discovery_privileged_localgroup_membership.toml",
+      "official_snapshot": {
+        "name": "Enumeration of Privileged Local Groups Membership",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "902d584c8ad35cb019e4cd9f32ec0e510ba670b181f044ee97a44b08609493ab"
+      },
+      "localized_at": "2026-09-15T06:08:53.914Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "291a0de9-937a-4189-94c0-3e847c8b13e4"
+    },
+    "e514d8cd-ed15-4011-84e2-d15147e059f1": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "credential_access_disable_kerberos_preauth",
+      "official_relpath": "rules/windows/credential_access_disable_kerberos_preauth.toml",
+      "official_snapshot": {
+        "name": "Kerberos Pre-authentication Disabled for User",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "015b012f127d25ae5101533b4874e57dc042393b088c36c0e424b31ff806dd8a"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "e514d8cd-ed15-4011-84e2-d15147e059f1"
+    },
+    "4e85dc8a-3e41-40d8-bc28-91af7ac6cf60": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "credential_access_bruteforce_multiple_logon_failure_followed_by_success",
+      "official_relpath": "rules/windows/credential_access_bruteforce_multiple_logon_failure_followed_by_success.toml",
+      "official_snapshot": {
+        "name": "Multiple Logon Failure Followed by Logon Success",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "3612f04ab868a3e8555eb68e6984912da62c386ee44b6d9c7c4131fbeeebf829"
+      },
+      "localized_at": "2026-09-15T06:08:35.774Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "4e85dc8a-3e41-40d8-bc28-91af7ac6cf60"
+    },
+    "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "privilege_escalation_takeover_new_source_ip",
+      "official_relpath": "rules/windows/privilege_escalation_takeover_new_source_ip.toml",
+      "official_snapshot": {
+        "name": "Potential Account Takeover - Logon from New Source IP",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "e267e0589a99c6f782f541d8ff70e14d743e35a93d11f1d0e4b31f216788adaf"
+      },
+      "localized_at": "2026-09-15T06:08:54.955Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"
+    },
+    "f9790abf-bd0c-45f9-8b5f-d0b74015e029": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "credential_access_bruteforce_admin_account",
+      "official_relpath": "rules/windows/credential_access_bruteforce_admin_account.toml",
+      "official_snapshot": {
+        "name": "Privileged Accounts Brute Force",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "75a9bada93fe2ca374e2ce7c244e3a138f07bddcf39f0966cfdbc87c6f9487c6"
+      },
+      "localized_at": "2026-09-15T06:08:41.696Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "f9790abf-bd0c-45f9-8b5f-d0b74015e029"
+    },
+    "16fac1a1-21ee-4ca6-b720-458e3855d046": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "privilege_escalation_group_policy_iniscript",
+      "official_relpath": "rules/windows/privilege_escalation_group_policy_iniscript.toml",
+      "official_snapshot": {
+        "name": "Startup/Logon Script added to Group Policy Object",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "38fdc7f154e6c2c9f7db4827f5ff7bb2fa88f6a89807bce8d59757b08eabb77a"
+      },
+      "localized_at": "2026-09-15T06:08:56.871Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "16fac1a1-21ee-4ca6-b720-458e3855d046"
+    },
+    "48b6edfc-079d-4907-b43c-baffa243270d": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "credential_access_bruteforce_multiple_logon_failure_same_srcip",
+      "official_relpath": "rules/windows/credential_access_bruteforce_multiple_logon_failure_same_srcip.toml",
+      "official_snapshot": {
+        "name": "Multiple Logon Failure from the same Source Address",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "79752ff944aa157315e57ddf6ba17d098d564a9fa8271318ece87dbb5338ed12"
+      },
+      "localized_at": "2026-09-15T06:08:45.761Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "48b6edfc-079d-4907-b43c-baffa243270d"
+    },
+    "5cd8e1f7-0050-4afc-b2df-904e40b2f5ae": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "persistence_user_account_added_to_privileged_group_ad",
+      "official_relpath": "rules/windows/persistence_user_account_added_to_privileged_group_ad.toml",
+      "official_snapshot": {
+        "name": "User Added to Privileged Group in Active Directory",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "c1fbffb7f693f081145b6075fc3e603f6d45df0e1477e3bb2e971b4040639161"
+      },
+      "localized_at": "2026-09-15T06:08:38.730Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "5cd8e1f7-0050-4afc-b2df-904e40b2f5ae"
+    },
+    "9f962927-1a4f-45f3-a57b-287f2c7029c1": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "credential_access_dcsync_replication_rights",
+      "official_relpath": "rules/windows/credential_access_dcsync_replication_rights.toml",
+      "official_snapshot": {
+        "name": "Potential Credential Access via DCSync",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "96bd7b70a018dd03fe22f52c606f3b4d04cb39117ba47d8497a338fcb3fd3088"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "9f962927-1a4f-45f3-a57b-287f2c7029c1"
+    },
+    "6f024bde-7085-489b-8250-5957efdf1caf": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "persistence_group_modification_by_system",
+      "official_relpath": "rules/windows/persistence_group_modification_by_system.toml",
+      "official_snapshot": {
+        "name": "Active Directory Group Modification by SYSTEM",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "40b97272fefa1dfc9cbfcb3652d4ec4aa32248f6e9fe16e43e3e66461fd160ba"
+      },
+      "localized_at": "2026-09-15T06:09:05.989Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "6f024bde-7085-489b-8250-5957efdf1caf"
+    },
+    "1aa9181a-492b-4c01-8b16-fa0735786b2b": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "persistence_user_account_creation",
+      "official_relpath": "rules/windows/persistence_user_account_creation.toml",
+      "official_snapshot": {
+        "name": "User Account Creation",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "752ec6e7b5a7abc72c04143fbc013aa1a04ac4e94cd5daccbdc1cdce22be4df4"
+      },
+      "localized_at": "2026-09-21T08:25:36Z",
+      "source": "manual",
+      "rule_id": "1aa9181a-492b-4c01-8b16-fa0735786b2b"
+    },
+    "b9554892-5e0e-424b-83a0-5aef95aa43bf": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "privilege_escalation_group_policy_privileged_groups",
+      "official_relpath": "rules/windows/privilege_escalation_group_policy_privileged_groups.toml",
+      "official_snapshot": {
+        "name": "Group Policy Abuse for Privilege Addition",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "46da78d7abebce04846a32b96bc3cd033e53786383edd1645623a370ffa1a23a"
+      },
+      "localized_at": "2026-09-15T06:09:02.981Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "b9554892-5e0e-424b-83a0-5aef95aa43bf"
+    },
+    "62a70f6f-3c37-43df-a556-f64fa475fba2": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "persistence_dontexpirepasswd_account",
+      "official_relpath": "rules/windows/persistence_dontexpirepasswd_account.toml",
+      "official_snapshot": {
+        "name": "Account Configured with Never-Expiring Password",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "e30cc3ee058997313515a4516c819d41810d26f874d83e2ea31934b918ef046e"
+      },
+      "localized_at": "2026-09-15T06:08:31.574Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "62a70f6f-3c37-43df-a556-f64fa475fba2"
+    },
+    "c0429aa8-9974-42da-bfb6-53a0a515a145": {
+      "kind": "official_zh",
+      "category": "windows",
+      "stem": "privilege_escalation_gpo_schtask_service_creation",
+      "official_relpath": "rules/windows/privilege_escalation_gpo_schtask_service_creation.toml",
+      "official_snapshot": {
+        "name": "Creation or Modification of a new GPO Scheduled Task or Service",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "7c22b67935c79e034e3d241bbb7683844080d2897beb52cbe46a8f1eb8a53472"
+      },
+      "localized_at": "2026-09-15T06:08:58.417Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "c0429aa8-9974-42da-bfb6-53a0a515a145"
+    },
+    "custom-win-gpo-change": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-gpo-change",
+      "localized_at": "2026-09-15T06:08:25.466Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-gpo-change"
+    },
+    "custom-linux-usermod-attribute": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-usermod-attribute",
+      "localized_at": "2026-09-15T06:09:14.202Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-usermod-attribute"
+    },
+    "custom-linux-group-membership-change": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-group-membership-change",
+      "localized_at": "2026-09-15T06:09:13.053Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-group-membership-change"
+    },
+    "custom-win-logon-success": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-logon-success",
+      "localized_at": "2026-09-15T06:08:27.800Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-logon-success"
+    },
+    "custom-win-group-membership": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-group-membership",
+      "localized_at": "2026-09-15T06:08:26.453Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-group-membership"
+    },
+    "custom-linux-ssh-login-failure": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-ssh-login-failure",
+      "localized_at": "2026-09-16T02:07:51.974Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-ssh-login-failure"
+    },
+    "custom-linux-useradd-account-create": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-useradd-account-create",
+      "localized_at": "2026-09-15T06:09:11.234Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-useradd-account-create"
+    },
+    "custom-win-stale-computer-reuse": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-stale-computer-reuse",
+      "localized_at": "2026-09-15T06:08:24.542Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-stale-computer-reuse"
+    },
+    "custom-win-computer-account-created": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-computer-account-created",
+      "localized_at": "2026-09-15T06:08:22.774Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-computer-account-created"
+    },
+    "custom-win-account-lockout": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-account-lockout",
+      "localized_at": "2026-09-15T06:08:29.567Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-account-lockout"
+    },
+    "custom-win-password-reset": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-password-reset",
+      "localized_at": "2026-09-15T06:08:20.526Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-password-reset"
+    },
+    "custom-win-user-disabled": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-user-disabled",
+      "localized_at": "2026-09-15T06:08:21.406Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-user-disabled"
+    },
+    "custom-win-special-privileges": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-special-privileges",
+      "localized_at": "2026-09-15T06:08:40.724Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-special-privileges"
+    },
+    "custom-linux-ssh-login-success-audit": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-ssh-login-success-audit",
+      "localized_at": "2026-09-16T02:07:54.980Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-ssh-login-success-audit"
+    },
+    "custom-linux-passwd-reset": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-passwd-reset",
+      "localized_at": "2026-09-15T06:09:09.116Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-passwd-reset"
+    },
+    "custom-win-user-attr-changed": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-user-attr-changed",
+      "localized_at": "2026-09-15T06:08:28.510Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-user-attr-changed"
+    },
+    "custom-win-logon-failure": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-logon-failure",
+      "localized_at": "2026-09-15T06:08:30.533Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-logon-failure"
+    },
+    "custom-win-user-enabled": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-user-enabled",
+      "localized_at": "2026-09-15T06:09:21.407Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-user-enabled"
+    },
+    "custom-linux-account-frequent-lock": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-account-frequent-lock",
+      "localized_at": "2026-09-15T06:09:15.084Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-account-frequent-lock"
+    },
+    "custom-win-user-account-created": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-win-user-account-created",
+      "localized_at": "2026-09-15T06:09:20.285Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-win-user-account-created"
+    },
+    "custom-linux-account-lock-unlock": {
+      "kind": "custom",
+      "category": "custom",
+      "stem": "custom-linux-account-lock-unlock",
+      "localized_at": "2026-09-15T06:09:10.004Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "custom-linux-account-lock-unlock"
+    },
+    "37cca4d4-92ab-4a33-a4f8-44a7a380ccda": {
+      "kind": "official_zh",
+      "category": "integrations/pad",
+      "stem": "privileged_access_ml_windows_high_count_user_account_management_events",
+      "official_relpath": "rules/integrations/pad/privileged_access_ml_windows_high_count_user_account_management_events.toml",
+      "official_snapshot": {
+        "name": "Spike in User Account Management Events",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "694d48ff757bfb6eedb3b80b8ded97b8ede51a8dab7058177c93ffcbcc3d77e8"
+      },
+      "localized_at": "2026-09-15T06:08:50.794Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "37cca4d4-92ab-4a33-a4f8-44a7a380ccda"
+    },
+    "751b0329-7295-4682-b9c7-4473b99add69": {
+      "kind": "official_zh",
+      "category": "integrations/pad",
+      "stem": "privileged_access_ml_windows_high_count_group_management_events",
+      "official_relpath": "rules/integrations/pad/privileged_access_ml_windows_high_count_group_management_events.toml",
+      "official_snapshot": {
+        "name": "Spike in Group Management Events",
+        "updated_date": "2026/09/18",
+        "maturity": "production",
+        "content_hash": "e73148446d49df1d21f206a48b0401dafcadc4ebc052da476a57ee3ec35957d4"
+      },
+      "localized_at": "2026-09-15T06:09:07.344Z",
+      "source": "linux_windows_chinese_rule.ndjson",
+      "rule_id": "751b0329-7295-4682-b9c7-4473b99add69"
+    }
+  }
+}

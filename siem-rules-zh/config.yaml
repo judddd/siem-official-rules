@@ -1,0 +1,17 @@
+# Elastic 官方 detection-rules 同步与汉化记录
+official_repo: https://github.com/elastic/detection-rules
+official_ref: main
+cache_dir: .cache/detection-rules
+localized_dir: localized
+reports_dir: reports
+
+# 与官方 rules/ 平级的 building block；默认纳入分类 diff
+include_building_block: true
+# 已废弃规则单独列出，不计入「未汉化」主队列
+include_deprecated: false
+
+# 本机代理（fetch 时写入环境变量；若 shell 里已 export 则不覆盖）
+proxy:
+  http: http://127.0.0.1:7890
+  https: http://127.0.0.1:7890
+  all: socks5://127.0.0.1:7890
