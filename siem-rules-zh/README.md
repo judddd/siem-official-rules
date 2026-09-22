@@ -18,7 +18,12 @@ python3.12 sync.py diff --offline       # 只用本地缓存
 python3.12 sync.py import-ndjson samples/linux_windows_chinese_rule.ndjson --offline
 python3.12 sync.py next --category linux --identity
 python3.12 sync.py record <rule_id> zh.json   # 输入可仍是多行 JSON；落盘为 .ndjson
-python3.12 sync.py export-ndjson -o reports/kibana-import.ndjson
+python3.12 sync.py pack --list
+python3.12 sync.py pack -c linux
+python3.12 sync.py pack -c linux -c windows -c custom
+python3.12 sync.py pack -c linux,ml -o reports/kibana-import-linux-ml.ndjson
+python3.12 sync.py export-ndjson -o reports/kibana-import.ndjson          # 全部
+python3.12 sync.py export-ndjson -o reports/kibana-import-linux.ndjson -c linux
 python3.12 sync.py rebuild              # 按 Kibana 导入格式重写 localized ndjson
 ```
 

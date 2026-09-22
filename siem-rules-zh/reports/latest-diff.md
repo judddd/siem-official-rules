@@ -1,8 +1,8 @@
 # SIEM 规则汉化 diff
 
-- 生成时间: `2026-09-21T08:53:56Z`
-- 官方 commit: `c66b12c` (2026-09-21 05:28:38 +0000) Lock versions for releases: 8.19,9.3,9.4,9.5 (#6843)
-- 官方规则: **2117** | 已汉化: **56** | 同步: 56 | 过期: **0** | 未汉化: **2061**
+- 生成时间: `2026-09-22T06:43:13Z`
+- 官方 commit: `11e144f` (2026-09-21 14:38:07 +0000) [Docs] Restore rule tag taxonomy guidance dropped in #6839 (#6849)
+- 官方规则: **2117** | 已汉化: **1229** | 同步: 1229 | 过期: **0** | 未汉化: **888**
 - 自定义: 21 | 官方已删/失配: 0
 
 ## 分类汇总（integrations 按子目录展开前的顶层）
@@ -10,24 +10,20 @@
 | 分类 | 官方 | 已汉化 | 同步 | 过期 | 未汉化 | 覆盖率 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | `integrations` | 750 | 2 | 2 | 0 | 748 | 0.3% |
-| `windows` | 493 | 16 | 16 | 0 | 477 | 3.2% |
-| `linux` | 372 | 26 | 26 | 0 | 346 | 7.0% |
 | `cross-platform` | 132 | 1 | 1 | 0 | 131 | 0.8% |
-| `building_block` | 129 | 0 | 0 | 0 | 129 | 0.0% |
-| `macos` | 100 | 0 | 0 | 0 | 100 | 0.0% |
-| `network` | 61 | 0 | 0 | 0 | 61 | 0.0% |
-| `ml` | 45 | 11 | 11 | 0 | 34 | 24.4% |
-| `promotions` | 26 | 0 | 0 | 0 | 26 | 0.0% |
 | `threat_intel` | 6 | 0 | 0 | 0 | 6 | 0.0% |
 | `apm` | 3 | 0 | 0 | 0 | 3 | 0.0% |
+| `building_block` | 129 | 129 | 129 | 0 | 0 | 100.0% |
+| `linux` | 372 | 372 | 372 | 0 | 0 | 100.0% |
+| `macos` | 100 | 100 | 100 | 0 | 0 | 100.0% |
+| `ml` | 45 | 45 | 45 | 0 | 0 | 100.0% |
+| `network` | 61 | 61 | 61 | 0 | 0 | 100.0% |
+| `promotions` | 26 | 26 | 26 | 0 | 0 | 100.0% |
+| `windows` | 493 | 493 | 493 | 0 | 0 | 100.0% |
 | `custom` | — | 21 | — | — | — | 自写 |
 
 ## 尚未开始汉化的官方分类
 
-- `building_block`
-- `macos`
-- `network`
-- `promotions`
 - `threat_intel`
 - `apm`
 
@@ -39,51 +35,6 @@
 - `d49cc73f-7a16-4def-89ce-9fc7127d7820` Web Application Suspicious Activity: sqlmap User Agent (`rules/apm/apm_sqlmap_user_agent.toml`)
 - `75ee75d8-c180-481c-ba88-ee50129a6aef` Web Application Suspicious Activity: Unauthorized Method (`rules/apm/apm_405_response_method_not_allowed.toml`)
 - `a87a4e42-1d82-44bd-b0bf-d9b7f91fb89e` Web Application Suspicious Activity: POST Request Declined (`rules/apm/apm_403_response_to_a_post.toml`)
-
-### `building_block`
-
-未汉化 129 条：
-- `c4e9ed3e-55a2-4309-a012-bc3c78dad10a` Windows System Network Connections Discovery (`rules_building_block/discovery_win_network_connections.toml`)
-- `708c9d92-22a3-4fe0-b6b9-1f861c55502d` Suspicious Execution via MSIEXEC (`rules_building_block/defense_evasion_suspicious_msiexec_execution.toml`)
-- `4982ac3e-d0ee-4818-b95d-d9522d689259` Process Discovery Using Built-in Tools (`rules_building_block/discovery_generic_process_discovery.toml`)
-- `56fa718c-a0de-4492-97ff-bbc444b015b8` Azure Virtual Machine Configuration Modified (`rules_building_block/persistence_azure_vm_configuration_modified.toml`)
-- `b2318c71-5959-469a-a3ce-3a0768e63b9c` Potential Network Share Discovery (`rules_building_block/discovery_net_share_discovery_winlog.toml`)
-- `089db1af-740d-4d84-9a5b-babd6de143b0` Windows Account or Group Discovery (`rules_building_block/discovery_generic_account_groups.toml`)
-- `5b9eb30f-87d6-45f4-9289-2bf2024f0376` Potential Masquerading as Browser Process (`rules_building_block/defense_evasion_masquerading_browsers.toml`)
-- `51176ed2-2d90-49f2-9f3d-17196428b169` Windows System Information Discovery (`rules_building_block/discovery_windows_system_information_discovery.toml`)
-- `260486ee-7d98-11ee-9599-f661ea17fbcd` New Okta Authentication Behavior Detected (`rules_building_block/initial_access_new_okta_authentication_behavior.toml`)
-- `e2dc8f8c-5f16-42fa-b49e-0eb8057f7444` System Network Connections Discovery (`rules_building_block/discovery_system_network_connections.toml`)
-- `b81bd314-db5b-4d97-82e8-88e3e5fc9de5` Linux System Information Discovery (`rules_building_block/discovery_linux_system_information_discovery.toml`)
-- `ce08b55a-f67d-4804-92b5-617b0fe5a5b5` First Occurrence GitHub Event for a Personal Access Token (PAT) (`rules_building_block/execution_github_new_event_action_for_pat.toml`)
-- `93120a05-caf5-47f6-a305-e8abee463fb9` Kubernetes Pod Creation Using Common Debug or Base Images (`rules_building_block/execution_common_debug_or_base_image_pod_creation.toml`)
-- `53dedd83-1be7-430f-8026-363256395c8b` Binary Content Copy via Cmd.exe (`rules_building_block/defense_evasion_cmd_copy_binary_contents.toml`)
-- `f754e348-f36f-4510-8087-d7f29874cc12` AWS Sign-In Token Created (`rules_building_block/initial_access_aws_signin_token_created.toml`)
-- `79124edf-30a8-4d48-95c4-11522cad94b1` File Compressed or Archived into Common Format by Unsigned Process (`rules_building_block/collection_common_compressed_archived_file.toml`)
-- `1d72d014-e2ab-4707-b056-9b96abe7b511` External IP Lookup from Non-Browser Process (`rules_building_block/discovery_post_exploitation_external_ip_lookup.toml`)
-- `93d2c5bf-dac1-4e0f-ab52-16f440782bb8` Google Workspace Login Flagged Suspicious (`rules_building_block/initial_access_google_workspace_login_flagged_suspicious_by_google.toml`)
-- `e0881d20-54ac-457f-8733-fe0bc5d44c55` System Service Discovery through built-in Windows Utilities (`rules_building_block/discovery_system_service_discovery.toml`)
-- `c5677997-f75b-4cda-b830-a75920514096` Service Path Modification via sc.exe (`rules_building_block/defense_evasion_services_exe_path.toml`)
-- `cccc9be5-d8b0-466e-8a37-617eae57351a` M365 Entra ID Risk Detection Signal (`rules_building_block/credential_access_entra_id_risk_detection_signal.toml`)
-- `b483365c-98a8-40c0-92d8-0458ca25058a` At.exe Command Lateral Movement (`rules_building_block/lateral_movement_at.toml`)
-- `ee53d67a-5f0c-423c-a53c-8084ae562b5c` Shortcut File Written or Modified on Startup Folder (`rules_building_block/persistence_startup_folder_lnk.toml`)
-- `393ef120-63d1-11ef-8e38-f661ea17fbce` AWS EC2 Multi-Region DescribeInstances API Calls (`rules_building_block/discovery_ec2_multi_region_describe_instances.toml`)
-- `3838e0e3-1850-4850-a411-2e8c5ba40ba8` Network Connection via Certutil (`rules_building_block/command_and_control_certutil_network_connection.toml`)
-- `c20cd758-07b1-46a1-b03f-fa66158258b8` Unsigned DLL Loaded by a Trusted Process (`rules_building_block/defense_evasion_dll_hijack.toml`)
-- `846fe13f-6772-4c83-bd39-9d16d4ad1a81` Deprecated - Microsoft Exchange Transport Agent Install Script (`rules_building_block/persistence_transport_agent_exchange.toml`)
-- `1f460f12-a3cf-4105-9ebb-f788cc63f365` Unusual Process Execution on WBEM Path (`rules_building_block/defense_evasion_unusual_process_path_wbem.toml`)
-- `1e6363a6-3af5-41d4-b7ea-d475389c0ceb` Creation of SettingContent-ms Files (`rules_building_block/execution_settingcontent_ms_file_creation.toml`)
-- `bc9e4f5a-e263-4213-a2ac-1edf9b417ada` File and Directory Permissions Modification (`rules_building_block/defense_evasion_file_permission_modification.toml`)
-- `035a6f21-4092-471d-9cda-9e379f459b1e` Potential Memory Seeking Activity (`rules_building_block/discovery_potential_memory_seeking_activity.toml`)
-- `b8f54e38-7a1d-4c9b-9e2f-3a4b5c6d7e8f` M365 Purview DLP Signal (`rules_building_block/collection_microsoft_purview_dlp_signal.toml`)
-- `c0b9dc99-c696-4779-b086-0d37dc2b3778` Memory Dump File with Unusual Extension (`rules_building_block/credential_access_mdmp_file_unusual_extension.toml`)
-- `7f89afef-9fc5-4e7b-bf16-75ffdf27f8db` Discovery of Internet Capabilities via Built-in Tools (`rules_building_block/discovery_internet_capabilities.toml`)
-- `808291d3-e918-4a3a-86cd-73052a0c9bdc` Suspicious Troubleshooting Pack Cabinet Execution (`rules_building_block/defense_evasion_msdt_suspicious_diagcab.toml`)
-- `4494c14f-5ff8-4ed2-8e99-bf816a1642fc` Potential Masquerading as VLC DLL (`rules_building_block/defense_evasion_masquerading_vlc_dll.toml`)
-- `8248323e-f888-4134-a26f-37a6362f7231` DNS to Commonly Abused Web Services (`rules_building_block/command_and_control_dns_to_commonly_abused_webservices.toml`)
-- `e707a7be-cc52-41ac-8ab3-d34b38c20005` Potential Credential Access via Memory Dump File Creation (`rules_building_block/credential_access_mdmp_file_creation.toml`)
-- `fe25d5bc-01fa-494a-95ff-535c29cc4c96` PowerShell Script with Password Policy Discovery Capabilities (`rules_building_block/discovery_posh_password_policy.toml`)
-- `5c81fc9d-1eae-437f-ba07-268472967013` Segfault Detected (`rules_building_block/execution_linux_segfault.toml`)
-- … 另有 89 条，用 `sync.py next --category building_block` 查看
 
 ### `cross-platform`
 
@@ -644,209 +595,6 @@
 - `ea09ff26-3902-4c53-bb8e-24b7a5d029dd` Unusual Process Spawned by a Parent Process (`rules/integrations/problemchild/defense_evasion_ml_rare_process_for_a_parent_process.toml`)
 - `13e908b9-7bf0-4235-abc9-b5deb500d0ad` Machine Learning Detected a Suspicious Windows Event with a Low Malicious Probability Score (`rules/integrations/problemchild/defense_evasion_ml_suspicious_windows_event_low_probability.toml`)
 
-### `linux`
-
-未汉化 346 条：
-- `4b74d3b0-416e-4099-b432-677e1cd098cc` Container Management Utility Run Inside A Container (`rules/linux/execution_container_management_binary_launched_inside_container.toml`)
-- `8293bf1f-8dd0-434e-b52a-1aa6ec101777` Suspicious Write Attempt to AppArmor Policy Management Files (`rules/linux/defense_evasion_apparmor_exploitation_via_sys_fs.toml`)
-- `84d1f8db-207f-45ab-a578-921d91c23eb2` Potential Upgrade of Non-interactive Shell (`rules/linux/execution_interpreter_tty_upgrade.toml`)
-- `7acb2de3-8465-472a-8d9c-ccd7b73d0ed8` Potential Privilege Escalation through Writable Docker Socket (`rules/linux/privilege_escalation_writable_docker_socket.toml`)
-- `17b3fcd1-90fb-4f5d-858c-dc1d998fa368` Initramfs Extraction via CPIO (`rules/linux/persistence_extract_initramfs_via_cpio.toml`)
-- `7b981906-86b7-4544-8033-c30ec6eb45fc` SELinux Configuration Creation or Renaming (`rules/linux/defense_evasion_selinux_configuration_creation_or_renaming.toml`)
-- `cac91072-d165-11ec-a764-f661ea17fbce` Abnormal Process ID or Lock File Created (`rules/linux/execution_abnormal_process_id_file_created.toml`)
-- `b11116fd-023c-4718-aeb8-fa9d283fc53b` Kubeconfig File Creation or Modification (`rules/linux/lateral_movement_kubeconfig_file_activity.toml`)
-- `bc0fc359-68db-421e-a435-348ced7a7f92` Potential Privilege Escalation via Enlightenment (`rules/linux/privilege_escalation_enlightenment_window_manager.toml`)
-- `d55abdfb-5384-402b-add4-6c401501b0c3` Privilege Escalation via CAP_CHOWN/CAP_FOWNER Capabilities (`rules/linux/privilege_escalation_suspicious_chown_fowner_elevation.toml`)
-- `9f420cca-cb27-44db-a13d-c43c7b48e04a` Kubelet API Connection Attempt to Internal IP (`rules/linux/lateral_movement_kubelet_api_connection_attempt_internal_ip.toml`)
-- `eb8abab8-dea4-4903-a0ad-dfcb09224488` Potential Privilege Escalation via a Parent Process Sequence (`rules/linux/privilege_escalation_potential_privesc_via_general_sequence_parent.toml`)
-- `0dd84246-a723-49ba-9f4e-a1e1dfa15990` Potential Privilege Escalation via unshare Followed by Root Process (`rules/linux/privilege_escalation_unshare_to_root_process_auditd_sequence.toml`)
-- `b7c05aaf-78c2-4558-b069-87fa25973489` Potential Buffer Overflow Attack Detected (`rules/linux/privilege_escalation_potential_bufferoverflow_attack.toml`)
-- `5c832156-5785-4c9c-a2e7-0d80d2ba3daa` Pluggable Authentication Module (PAM) Creation in Unusual Directory (`rules/linux/persistence_pluggable_authentication_module_creation_in_unusual_dir.toml`)
-- `86b3a245-03de-49a5-ab57-ae44d8f064da` Container Runtime CLI Execution with Suspicious Arguments (`rules/linux/execution_container_runtime_cli_suspicious_arguments.toml`)
-- `f7a131f8-44b7-4957-99a4-e6c54d93d816` Potential Kubeletctl Execution (`rules/linux/discovery_potential_kubeletctl_execution.toml`)
-- `cc3dab79-3706-4775-9404-a722e2b00fed` Kernel Module Loaded with Tainting Flags (`rules/linux/persistence_tainted_kernel_module_loaded.toml`)
-- `94418745-529f-4259-8d25-a713a6feb6ae` Executable Bit Set for Potential Persistence Script (`rules/linux/persistence_potential_persistence_script_executable_bit_set.toml`)
-- `5ae02ebc-a5de-4eac-afe6-c88de696477d` Potential Chroot Container Escape via Mount (`rules/linux/privilege_escalation_docker_mount_chroot_container_escape.toml`)
-- `96f29282-ffcc-4ce7-834b-b17aee905568` Potential Backdoor Execution Through PAM_EXEC (`rules/linux/persistence_pluggable_authentication_module_pam_exec_backdoor_exec.toml`)
-- `9b80cb26-9966-44b5-abbf-764fbdbc3586` Privilege Escalation via CAP_SETUID/SETGID Capabilities (`rules/linux/privilege_escalation_suspicious_uid_guid_elevation.toml`)
-- `7dfaaa17-425c-4fe7-bd36-83705fde7c2b` Suspicious Kworker UID Elevation (`rules/linux/privilege_escalation_kworker_uid_elevation.toml`)
-- `2605aa59-29ac-4662-afad-8d86257c7c91` Potential Suspicious DebugFS Root Device Access (`rules/linux/privilege_escalation_sda_disk_mount_non_root.toml`)
-- `ba81c182-4287-489d-af4d-8ae834b06040` Kernel Driver Load by non-root User (`rules/linux/persistence_kernel_driver_load_by_non_root.toml`)
-- `f16fca20-4d6c-43f9-aec1-20b6de3b0aeb` Suspicious Child Execution via Web Server (`rules/linux/persistence_webserver_suspicious_child_execution.toml`)
-- `03c23d45-d3cb-4ad4-ab5d-b361ffe8724a` Potential Network Scan Executed From Host (`rules/linux/discovery_ping_sweep_detected.toml`)
-- `dd52d45a-4602-4195-9018-ebe0f219c273` Network Connections Initiated Through XDG Autostart Entry (`rules/linux/persistence_xdg_autostart_netcon.toml`)
-- `d74d6506-427a-4790-b170-0c2a6ddac799` Suspicious Memory grep Activity (`rules/linux/discovery_suspicious_memory_grep_activity.toml`)
-- `25d917c4-aa3c-4111-974c-286c0312ff95` Network Activity Detected via Kworker (`rules/linux/command_and_control_linux_kworker_netcon.toml`)
-- `e7856173-6489-449f-80ec-c1f5fcd7b87c` Suspicious SUID Binary Execution (`rules/linux/privilege_escalation_suspicious_suid_binary_execution.toml`)
-- `3688577a-d196-11ec-90b0-f661ea17fbce` Process Started from Process ID (PID) File (`rules/linux/execution_process_started_from_process_id_file.toml`)
-- `2339f03c-f53f-40fa-834b-40c5983fc41f` Kernel Module Load via Built-in Utility (`rules/linux/persistence_insmod_kernel_module_load.toml`)
-- `5749282b-7524-4c9d-af9a-e2b3e814e5d4` AWS Credentials Searched For Inside A Container (`rules/linux/credential_access_aws_creds_search_inside_container.toml`)
-- `0f4d35e4-925e-4959-ab24-911be207ee6f` rc.local/rc.common File Creation (`rules/linux/persistence_rc_script_creation.toml`)
-- `39c06367-b700-4380-848a-cab06e7afede` Systemd Generator Created (`rules/linux/persistence_systemd_generator_creation.toml`)
-- `c73cc6ab-b30e-46bf-b5f2-29d9ab4caf7b` Mount Launched Inside a Container (`rules/linux/privilege_escalation_mount_launched_inside_container.toml`)
-- `f7c70f2e-4616-439c-85ac-5b98415042fe` Potential Privilege Escalation via Linux DAC permissions (`rules/linux/privilege_escalation_dac_permissions.toml`)
-- `eef9f8b5-48ec-44b5-b8bd-7b9b7d71853c` Kubectl Apply Pod from URL (`rules/linux/execution_kubectl_apply_pod_from_url.toml`)
-- `1fa350e0-0aa2-4055-bf8f-ab8b59233e59` High Number of Egress Network Connections from Unusual Executable (`rules/linux/command_and_control_frequent_egress_netcon_from_sus_executable.toml`)
-- … 另有 306 条，用 `sync.py next --category linux` 查看
-
-### `macos`
-
-未汉化 100 条：
-- `e3f5a566-df31-40cc-987c-24bc4bb94ba5` Persistence via a Hidden Plist Filename (`rules/macos/persistence_hidden_plist_filename.toml`)
-- `6b82a0ce-10ac-4cb7-8a66-0ba4d24540cf` Suspicious Curl to Google App Script Endpoint (`rules/macos/command_and_control_suspicious_curl_to_google_app_script.toml`)
-- `c81cefcb-82b9-4408-a533-3c3df549e62d` Persistence via Docker Shortcut Modification (`rules/macos/persistence_docker_shortcuts_plist_modification.toml`)
-- `ac412404-57a5-476f-858f-4e8fbb4f48d8` Potential Persistence via Login Hook (`rules/macos/persistence_loginwindow_plist_modification.toml`)
-- `25368123-b7b8-4344-9fd4-df28051b4c6e` First Time Python Created a LaunchAgent or LaunchDaemon (`rules/macos/persistence_python_launch_agent_or_daemon_creation_first_occurrence.toml`)
-- `5ae4e6f8-d1bf-40fa-96ba-e29645e1e4dc` Remote SSH Login Enabled via systemsetup Command (`rules/macos/lateral_movement_remote_ssh_login_enabled.toml`)
-- `e26c0f76-2e80-445b-9e98-ab5532ccc46f` Full Disk Access Permission Check (`rules/macos/discovery_full_disk_access_check.toml`)
-- `47e46d85-3963-44a0-b856-bccff48f8676` DNS Request for IP Lookup Service via Unsigned Binary (`rules/macos/discovery_dns_request_for_ip_lookup_service.toml`)
-- `f0b48bbc-549e-4bcf-8ee0-a7a72586c6a7` Quarantine Attrib Removed by Unsigned or Untrusted Process (`rules/macos/defense_evasion_attempt_del_quarantine_attrib.toml`)
-- `565c2b44-7a21-4818-955f-8d4737967d2e` Potential Admin Group Account Addition (`rules/macos/privilege_escalation_local_user_added_to_admin.toml`)
-- `aa1e007a-2997-4247-b048-dd9344742560` Script Interpreter Connection to Non-Standard Port (`rules/macos/command_and_control_script_interpreter_connection_to_non_standard_port.toml`)
-- `15dacaa0-5b90-466b-acab-63435a59701a` Virtual Private Network Connection Attempt (`rules/macos/lateral_movement_vpn_connection_attempt.toml`)
-- `083fa162-e790-4d85-9aeb-4fea04188adb` Suspicious Hidden Child Process of Launchd (`rules/macos/persistence_defense_evasion_hidden_launch_agent_deamon_logonitem_process.toml`)
-- `e6e8912f-283f-4d0d-8442-e0dcaf49944b` Screensaver Plist File Modified by Unexpected Process (`rules/macos/persistence_screensaver_plist_file_modification.toml`)
-- `5d9f8cfc-0d03-443e-a167-2b0597ce0965` Suspicious Automator Workflows Execution (`rules/macos/execution_script_via_automator_workflows.toml`)
-- `6e5189c4-d3a5-4114-8cb3-bd3a65713f19` System and Network Configuration Check (`rules/macos/discovery_system_and_network_configuration_check.toml`)
-- `f1f3070e-045c-4e03-ae58-d11d43d2ee51` Manual Loading of a Suspicious Chromium Extension (`rules/macos/persistence_manual_chromium_extension_loading.toml`)
-- `15606250-449d-46a8-aaff-4043e42aefb9` Suspicious StartupItem Plist Creation (`rules/macos/persistence_startup_item_plist_creation.toml`)
-- `abc7a2be-479e-428b-b0b3-1d22bda46dd9` Google Calendar C2 via Script Interpreter (`rules/macos/command_and_control_google_calendar_c2_via_script.toml`)
-- `bc1eeacf-2972-434f-b782-3a532b100d67` Attempt to Install Root Certificate (`rules/macos/defense_evasion_install_root_certificate.toml`)
-- `d75991f2-b989-419d-b797-ac1e54ec2d61` SystemKey Access via Command Line (`rules/macos/credential_access_systemkey_dumping.toml`)
-- `aba3bc11-e02f-4a03-8889-d86ea1a44f76` Perl Outbound Network Connection (`rules/macos/command_and_control_perl_outbound_network_connection.toml`)
-- `89fa6cb7-6b53-4de2-b604-648488841ab8` Persistence via DirectoryService Plugin Modification (`rules/macos/persistence_directory_services_plugins_modification.toml`)
-- `a0fbd7a9-1923-4e05-92df-b484168f17bc` Sensitive File Access followed by Compression (`rules/macos/collection_sensitive_file_access_followed_by_compression.toml`)
-- `9092cd6c-650f-4fa3-8a8a-28256c7489c9` Keychain Password Retrieval via Command Line (`rules/macos/credential_access_keychain_pwd_retrieval_security_cmd.toml`)
-- `f24bcae1-8980-4b30-b5dd-f851b055c9e7` Creation of Hidden Login Item via Apple Script (`rules/macos/persistence_creation_hidden_login_item_osascript.toml`)
-- `62ba8542-1246-4647-9b84-98aa1bc0760a` Persistence via Suspicious Launch Agent or Launch Daemon (`rules/macos/persistence_suspicious_launch_agent_or_launch_daemon.toml`)
-- `e29599ee-d6ad-46a9-9c6a-dc39f361890d` Suspicious pbpaste High Volume Activity (`rules/macos/credential_access_high_volume_of_pbpaste.toml`)
-- `d7b57cbd-de03-4c3b-8278-daa1ee4a6772` Suspicious Apple Mail Rule Plist Modification (`rules/macos/persistence_apple_mail_rule_modification.toml`)
-- `99239e7d-b0d4-46e3-8609-acafcf99f68c` Suspicious Installer Package Spawns Network Event (`rules/macos/execution_installer_package_spawned_network_event.toml`)
-- `02ea4563-ec10-4974-b7de-12e65aa4f9b3` Dumping Account Hashes via Built-In Commands (`rules/macos/credential_access_dumping_hashes_bi_cmds.toml`)
-- `1615230f-beb7-48d8-9b3f-6d10674703bf` Suspicious SIP Check by macOS Application (`rules/macos/discovery_suspicious_sip_check.toml`)
-- `ffa676dc-09b0-11f0-94ba-b66272739ecb` Unusual Network Connection to Suspicious Top Level Domain (`rules/macos/command_and_control_unusual_connection_to_suspicious_top_level_domain.toml`)
-- `38948d29-3d5d-42e3-8aec-be832aaaf8eb` Prompt for Credentials with Osascript (`rules/macos/credential_access_promt_for_pwd_via_osascript.toml`)
-- `f683dcdf-a018-4801-b066-193d4ae6c8e5` SoftwareUpdate Preferences Modification (`rules/macos/defense_evasion_apple_softupdates_modification.toml`)
-- `b4449455-f986-4b5a-82ed-e36b129331f7` Potential Persistence via Atom Init Script Modification (`rules/macos/persistence_via_atom_init_file_modification.toml`)
-- `ad88231f-e2ab-491c-8fc6-64746da26cfe` Kerberos Cached Credentials Dumping (`rules/macos/credential_access_kerberosdump_kcc.toml`)
-- `60da1bd7-c0b9-4ba2-b487-50a672274c04` Discovery Command Output Written to Suspicious File (`rules/macos/collection_discovery_output_written_to_suspicious_file.toml`)
-- `6482255d-f468-45ea-a5b3-d3a7de1331ae` Modification of Safari Settings via Defaults Command (`rules/macos/defense_evasion_safari_config_change.toml`)
-- `c292fa52-4115-408a-b897-e14f684b3cb7` Persistence via Folder Action Script (`rules/macos/persistence_folder_action_scripts_runtime.toml`)
-- … 另有 60 条，用 `sync.py next --category macos` 查看
-
-### `ml`
-
-未汉化 34 条：
-- `eaa77d63-9679-4ce3-be25-3ba8b795e5fa` Spike in Firewall Denies (`rules/ml/ml_high_count_network_denies.toml`)
-- `6e40d56f-5c0e-4ac6-aece-bee96645b172` Anomalous Process For a Windows Population (`rules/ml/persistence_ml_windows_anomalous_process_all_hosts.toml`)
-- `9d302377-d226-4e12-b54c-1906b5aec4f6` Unusual Linux Process Calling the Metadata Service (`rules/ml/credential_access_ml_linux_anomalous_metadata_process.toml`)
-- `91f02f01-969f-4167-8d77-07827ac4cee0` Unusual Web User Agent (`rules/ml/command_and_control_ml_packetbeat_rare_user_agent.toml`)
-- `647fc812-7996-4795-8869-9c4ea595fe88` Anomalous Process For a Linux Population (`rules/ml/persistence_ml_linux_anomalous_process_all_hosts.toml`)
-- `91f02f01-969f-4167-8f55-07827ac3acc9` Unusual Web Request (`rules/ml/command_and_control_ml_packetbeat_rare_urls.toml`)
-- `445a342e-03fb-42d0-8656-0367eb2dead5` Unusual Windows Path Activity (`rules/ml/persistence_ml_windows_anomalous_path_activity.toml`)
-- `0b29cab4-dbbd-4a3f-9e8e-1287c7c11ae5` Anomalous Windows Process Creation (`rules/ml/persistence_ml_windows_anomalous_process_creation.toml`)
-- `5c983105-4681-46c3-9890-0c66d05e776b` Unusual Linux Process Discovery Activity (`rules/ml/discovery_ml_linux_system_process_discovery.toml`)
-- `59756272-1998-4b8c-be14-e287035c4d10` Unusual Linux User Discovery Activity (`rules/ml/discovery_ml_linux_system_user_discovery.toml`)
-- `c7db5533-ca2a-41f6-a8b0-ee98abe0f573` Spike in Network Traffic To a Country (`rules/ml/ml_spike_in_traffic_to_a_country.toml`)
-- `6d448b96-c922-4adb-b51c-b767f1ea5b76` Unusual Process For a Windows Host (`rules/ml/persistence_ml_rare_process_by_host_windows.toml`)
-- `52afbdc5-db15-485e-bc24-f5707f820c4b` Unusual Linux Network Activity (`rules/ml/ml_linux_anomalous_network_activity.toml`)
-- `1faec04b-d902-4f89-8aff-92cd9043c16f` Unusual Linux User Calling the Metadata Service (`rules/ml/credential_access_ml_linux_anomalous_metadata_user.toml`)
-- `b240bfb8-26b7-4e5e-924e-218144a3fa71` Spike in Network Traffic (`rules/ml/ml_high_count_network_events.toml`)
-- `17e68559-b274-4948-ad0b-f8415bb31126` Unusual Network Destination Domain Name (`rules/ml/ml_packetbeat_rare_server_domain.toml`)
-- `35f86980-1fb1-4dff-b311-3be941549c8d` Network Traffic to Rare Destination Country (`rules/ml/ml_rare_destination_country.toml`)
-- `d4af3a06-1e0a-48ec-b96a-faf2309fae46` Unusual Linux System Information Discovery Activity (`rules/ml/discovery_ml_linux_system_information_discovery.toml`)
-- `cd66a419-9b3f-4f57-8ff8-ac4cd2d5f530` Anomalous Linux Compiler Activity (`rules/ml/resource_development_ml_linux_anomalous_compiler_activity.toml`)
-- `fe8d6507-b543-4bbc-849f-dc0da6db29f6` Spike in host-based traffic (`rules/ml/ml_high_count_events_for_a_host_name.toml`)
-- `4577d441-0c05-4bfb-9068-39a0cb855269` Rare Powershell Script (`rules/ml/execution_ml_windows_rare_script.toml`)
-- `46f804f5-b289-43d6-a881-9387cf594f75` Unusual Process For a Linux Host (`rules/ml/persistence_ml_rare_process_by_host_linux.toml`)
-- `ba342eb2-583c-439f-b04d-1fdd7c1417cc` Unusual Windows Network Activity (`rules/ml/ml_windows_anomalous_network_activity.toml`)
-- `df197323-72a8-46a9-a08e-3f5b04a4a97a` Unusual Windows User Calling the Metadata Service (`rules/ml/credential_access_ml_windows_anomalous_metadata_user.toml`)
-- `3c7e32e6-6104-46d9-a06e-da0f8b5795a0` Unusual Linux Network Port Activity (`rules/ml/ml_linux_anomalous_network_port_activity.toml`)
-- `1781d055-5c66-4adf-9c71-fc0fa58338c7` Unusual Windows Service (`rules/ml/persistence_ml_windows_anomalous_service.toml`)
-- `ad66db2e-1cc7-4a2c-8fa5-5f3895e44a18` Decline in host-based traffic (`rules/ml/ml_low_count_events_for_a_host_name.toml`)
-- `abae61a8-c560-4dbd-acca-1e1438bff36b` Unusual Windows Process Calling the Metadata Service (`rules/ml/credential_access_ml_windows_anomalous_metadata_process.toml`)
-- `746edc4c-c54c-49c6-97a1-651223819448` Unusual DNS Activity (`rules/ml/command_and_control_ml_rare_dns_question.toml`)
-- `1781d055-5c66-4adf-9d82-fc0fa58449c8` Unusual Windows User Privilege Elevation Activity (`rules/ml/privilege_escalation_ml_windows_rare_user_runas_event.toml`)
-- `c28c4d8c-f014-40ef-88b6-79a1d67cd499` Unusual Linux Network Connection Discovery (`rules/ml/discovery_ml_linux_system_network_connection_discovery.toml`)
-- `91f02f01-969f-4167-8f66-07827ac3bdd9` DNS Tunneling (`rules/ml/command_and_control_ml_dns_tunneling.toml`)
-- `f9590f47-6bd5-4a49-bd49-a2f886476fb9` Unusual Linux Network Configuration Discovery (`rules/ml/discovery_ml_linux_system_network_configuration_discovery.toml`)
-- `1781d055-5c66-4adf-9d60-fc0fa58337b6` Suspicious Powershell Script (`rules/ml/execution_ml_windows_anomalous_script.toml`)
-
-### `network`
-
-未汉化 61 条：
-- `e7bf9314-f346-45b5-a6ed-044dc3b839c8` Potential SIP Extension Enumeration (`rules/network/discovery_potential_sip_extension_enumeration.toml`)
-- `e7075e8d-a966-458e-a183-85cd331af255` Default Cobalt Strike Team Server Certificate (`rules/network/command_and_control_cobalt_strike_default_teamserver_cert.toml`)
-- `8ab64631-17ee-46b9-9800-9acacbeee1b3` PostgreSQL COPY PROGRAM Command Execution (`rules/network/execution_postgresql_copy_program_command.toml`)
-- `a8f7e9d4-3b2c-4d5e-8f1a-6c9b0e2d4a7f` React2Shell (CVE-2025-55182) Exploitation Attempt (`rules/network/initial_access_react_server_components_rce_attempt.toml`)
-- `2449be9d-2fdf-4126-a85b-f05e4058df9f` Potential cPanel WHM CRLF Authentication Bypass (CVE-2026-41940) (`rules/network/initial_access_potential_cpanel_whm_crlf_authentication_bypass.toml`)
-- `63c3c736-72e1-4d41-8022-27b5c4935e93` First Time Seen Memcached Writer (`rules/network/impact_first_time_seen_memcached_writer.toml`)
-- `1aefed68-eecd-47cc-9044-4a394b60061d` React2Shell Network Security Alert (`rules/network/initial_access_react_server_rce_network_alerts.toml`)
-- `0ffc3d78-44ce-4a55-b2be-98219e0eed05` SMB (Windows File Sharing) Activity from the Internet (`rules/network/initial_access_smb_windows_file_sharing_activity_from_the_internet.toml`)
-- `89ed957d-609b-4b00-b8c6-a5cbd187632c` Potential DNS Tunneling via Long and Unique Subdomains (`rules/network/command_and_control_dns_tunneling_long_labels.toml`)
-- `11013227-0301-4a8c-b150-4db924484475` Abnormally Large DNS Response (`rules/network/lateral_movement_dns_server_overflow.toml`)
-- `cbbe0523-33f3-4420-b88d-5c940d9e72c1` FortiGate Super Admin Account Creation (`rules/network/persistence_fortigate_super_admin_account_creation.toml`)
-- `39ab0f66-efa0-4649-9c9c-8c64682f5fdd` Potential Redis CONFIG SET SSH Authorized Key Injection (`rules/network/persistence_potential_redis_config_set_ssh_key_injection.toml`)
-- `d994a184-ab93-4cff-8fb6-31a4b4dd18b1` Deprecated TLS Version or Weak Cipher Negotiated Externally (`rules/network/credential_access_tls_deprecated_or_weak_cipher_negotiation.toml`)
-- `7c7d2a89-b7e9-4e8d-bbf2-5a782fdcc803` Splunk Enterprise PostgreSQL Backup-to-Restore Potential RCE Sequence (`rules/network/initial_access_splunk_postgres_backup_restore_rce_sequence.toml`)
-- `9a1ba0ac-aa6f-4c0d-8c80-b7f6ea2efa36` Potential Redis Lua Use-After-Free RCE Attempt (CVE-2025-49844 / RediShell) (`rules/network/initial_access_potential_redis_lua_use_after_free_rce_cve_2025_49844.toml`)
-- `2a7823db-0bc2-48f6-aa2f-e6aef233c6dc` Splunk Enterprise PostgreSQL Recovery Endpoint Injection Artifacts (`rules/network/initial_access_splunk_postgres_recovery_body_injection.toml`)
-- `32923416-763a-4531-bb35-f33b9232ecdb` RPC (Remote Procedure Call) to the Internet (`rules/network/initial_access_rpc_remote_procedure_call_to_the_internet.toml`)
-- `81139742-4d3a-49f3-a6dd-e0fb9834f959` ICMP Timestamp or Information Request from the Internet (`rules/network/discovery_icmp_timestamp_or_information_request_from_the_internet.toml`)
-- `c82b2bd8-d701-420c-ba43-f11a155b681a` SMB (Windows File Sharing) Activity to the Internet (`rules/network/initial_access_smb_windows_file_sharing_activity_to_the_internet.toml`)
-- `2014ebd8-b847-4cc0-a827-d0d61ec88680` ICMP Redirect Message from Internal Host (`rules/network/credential_access_icmp_redirect_message_observed.toml`)
-- `8a556117-3f05-430e-b2eb-7df0100b4e3b` FortiGate Administrator Login from Multiple IP Addresses (`rules/network/initial_access_fortigate_admin_login_multi_srcip.toml`)
-- `8c1bdde8-4204-45c0-9e0c-c85ca3902488` RDP (Remote Desktop Protocol) from the Internet (`rules/network/command_and_control_rdp_remote_desktop_protocol_from_the_internet.toml`)
-- `3ad49c61-7adc-42c1-b788-732eda2f5abf` VNC (Virtual Network Computing) to the Internet (`rules/network/command_and_control_vnc_virtual_network_computing_to_the_internet.toml`)
-- `34fde489-94b0-4500-a76f-b8a157cf9269` Accepted Default Telnet Port Connection (`rules/network/command_and_control_accepted_default_telnet_port_connection.toml`)
-- `bbaa96b9-f36c-4898-ace2-581acb00a409` Potential SYN-Based Port Scan Detected (`rules/network/discovery_potential_syn_port_scan_detected.toml`)
-- `cf53f532-9cc9-445a-9ae7-fced307ec53c` Cobalt Strike Command and Control Beacon (`rules/network/command_and_control_cobalt_strike_beacon.toml`)
-- `3b15d24d-03e8-422c-b260-e0834e5fec83` Thrift RPC Method from an External Client (`rules/network/initial_access_thrift_rpc_method_from_external_client.toml`)
-- `581bd9b4-ee08-415a-97d7-756e6c53c264` Repeated Stalled TLS Handshakes via ALPN acme-tls/1 Extension (`rules/network/impact_tls_alpn_acme_stalled_handshake.toml`)
-- `5700cb81-df44-46aa-a5d7-337798f53eb8` VNC (Virtual Network Computing) from the Internet (`rules/network/command_and_control_vnc_virtual_network_computing_from_the_internet.toml`)
-- `143cb236-0956-4f42-a706-814bcaa0cf5a` RPC (Remote Procedure Call) from the Internet (`rules/network/initial_access_rpc_remote_procedure_call_from_the_internet.toml`)
-- `b5f94e78-fb4d-4f4b-879e-e51ea667d09c` Potential DHCP Starvation via High Client MAC Cardinality (`rules/network/impact_dhcp_starvation_high_client_mac_cardinality.toml`)
-- `618a219d-a363-4ab1-ba30-870d7c22facd` FortiGate FortiCloud SSO Login from Unusual Source (`rules/network/initial_access_fortigate_sso_login_from_unusual_source.toml`)
-- `31295df3-277b-4c56-a1fb-84e31b4222a9` Inbound Connection to an Unsecure Elasticsearch Node (`rules/network/initial_access_unsecure_elasticsearch_node.toml`)
-- `35ef761a-7136-4cb9-a32d-4e7abddb3bac` First Time Seen NFS AUTH_SYS Root UID Access (`rules/network/collection_nfs_auth_sys_root_uid_access.toml`)
-- `781f8746-2180-4691-890c-4c96d11ca91d` Potential Network Sweep Detected (`rules/network/discovery_potential_network_sweep_detected.toml`)
-- `2e580225-2a58-48ef-938b-572933be06fe` Halfbaked Command and Control Beacon (`rules/network/command_and_control_halfbaked_beacon.toml`)
-- `a9cb3641-ff4b-4cdc-a063-b4b8d02a67c7` Newly Observed IPSEC NAT Traversal Peer (`rules/network/command_and_control_newly_observed_ipsec_nat_traversal_peer.toml`)
-- `e3a7b1c2-5d9f-4e8a-b6c3-2f1d4e5a6b7c` FortiGate SSO Login Followed by Administrator Account Creation (`rules/network/persistence_fortigate_sso_login_followed_by_admin_creation.toml`)
-- `d08ba1ed-a0a3-4fe0-9c02-e643b9a25a03` FortiGate Administrator Account Creation from Unusual Source (`rules/network/persistence_fortigate_admin_creation_unusual_source.toml`)
-- `1ca59146-7386-4033-a010-1c32717e9321` Potential SIP REGISTER Brute Force (`rules/network/credential_access_potential_sip_register_brute_force.toml`)
-- … 另有 21 条，用 `sync.py next --category network` 查看
-
-### `promotions`
-
-未汉化 26 条：
-- `aeebe561-c338-4118-9924-8cb4e478aa58` CrowdStrike External Alerts (`rules/promotions/crowdstrike_external_alerts.toml`)
-- `990838aa-a953-4f3e-b3cb-6ddf7584de9e` Process Injection - Prevented - Elastic Endgame (`rules/promotions/privilege_escalation_endgame_process_injection_prevented.toml`)
-- `9b35422b-9102-45a9-8610-2e0c22281c55` SentinelOne Alert External Alerts (`rules/promotions/sentinelone_alert_external_alerts.toml`)
-- `c9e38e64-3f4c-4bf3-ad48-0e61a60ea1fa` Credential Manipulation - Prevented - Elastic Endgame (`rules/promotions/privilege_escalation_endgame_cred_manipulation_prevented.toml`)
-- `8cb4f625-7743-4dfb-ae1b-ad92be9df7bd` Ransomware - Detected - Elastic Endgame (`rules/promotions/endgame_ransomware_detected.toml`)
-- `77a3c3df-8ec4-4da4-b758-878f551dee69` Adversary Behavior - Detected - Elastic Endgame (`rules/promotions/endgame_adversary_behavior_detected.toml`)
-- `0a97b20f-4144-49ea-be32-b540ecc445de` Malware - Detected - Elastic Endgame (`rules/promotions/endgame_malware_detected.toml`)
-- `d3b6222f-537e-4b84-956a-3ebae2dcf811` Splunk External Alerts (`rules/promotions/splunk_external_alerts.toml`)
-- `70558fd5-6448-4c65-804a-8567ce02c3a2` Google SecOps External Alerts (`rules/promotions/google_secops_external_alerts.toml`)
-- `2863ffeb-bf77-44dd-b7a5-93ef94b72036` Exploit - Prevented - Elastic Endgame (`rules/promotions/execution_endgame_exploit_prevented.toml`)
-- `3b382770-efbb-44f4-beed-f5e0a051b895` Malware - Prevented - Elastic Endgame (`rules/promotions/endgame_malware_prevented.toml`)
-- `453f659e-0429-40b1-bfdb-b6957286e04b` Permission Theft - Prevented - Elastic Endgame (`rules/promotions/privilege_escalation_endgame_permission_theft_prevented.toml`)
-- `d6702168-2be6-4d7d-a549-9bff67733df3` IBM QRadar External Alerts (`rules/promotions/ibm_qradar_external_alerts.toml`)
-- `74147312-ba03-4bea-91d1-040d54c1e8c3` Microsoft Sentinel External Alerts (`rules/promotions/microsoft_sentinel_external_alerts.toml`)
-- `e43b7578-f3cc-4682-a8cf-f9d8a5fb07f1` SentinelOne Threat External Alerts (`rules/promotions/sentinelone_threat_external_alerts.toml`)
-- `c3167e1b-f73c-41be-b60b-87f4df707fe3` Permission Theft - Detected - Elastic Endgame (`rules/promotions/privilege_escalation_endgame_permission_theft_detected.toml`)
-- `80c52164-c82a-402c-9964-852533d58be1` Process Injection - Detected - Elastic Endgame (`rules/promotions/privilege_escalation_endgame_process_injection_detected.toml`)
-- `c0be5f31-e180-48ed-aa08-96b36899d48f` Credential Manipulation - Detected - Elastic Endgame (`rules/promotions/privilege_escalation_endgame_cred_manipulation_detected.toml`)
-- `3c99579e-6491-4562-87f4-4d10f0a822b4` Microsoft Defender XDR Incident External Alerts (`rules/promotions/m365_defender_incident_external_alerts.toml`)
-- `e3c5d5cb-41d5-4206-805c-f30561eae3ac` Ransomware - Prevented - Elastic Endgame (`rules/promotions/endgame_ransomware_prevented.toml`)
-- `571afc56-5ed9-465d-a2a9-045f099f6e7e` Credential Dumping - Detected - Elastic Endgame (`rules/promotions/credential_access_endgame_cred_dumping_detected.toml`)
-- `720fc1aa-e195-4a1d-81d8-04edfe5313ed` Elastic Security External Alerts (`rules/promotions/elastic_security_external_alerts.toml`)
-- `db8c33a8-03cd-4988-9e2c-d0a4863adb13` Credential Dumping - Prevented - Elastic Endgame (`rules/promotions/credential_access_endgame_cred_dumping_prevented.toml`)
-- `2003cdc8-8d83-4aa5-b132-1f9a8eb48514` Exploit - Detected - Elastic Endgame (`rules/promotions/execution_endgame_exploit_detected.toml`)
-- `eb079c62-4481-4d6e-9643-3ca499df7aaa` External Alerts (`rules/promotions/external_alerts.toml`)
-- `c2a0e42b-ac3d-468f-82a5-0082066e1b59` Microsoft Defender XDR Alert External Alerts (`rules/promotions/m365_defender_alert_external_alerts.toml`)
-
 ### `threat_intel`
 
 未汉化 6 条：
@@ -856,51 +604,6 @@
 - `aab184d3-72b3-4639-b242-6597c99d8bca` Threat Intel Hash Indicator Match (`rules/threat_intel/threat_intel_indicator_match_hash.toml`)
 - `fcf18de8-ad7d-4d01-b3f7-a11d5b3883af` Threat Intel Email Indicator Match (`rules/threat_intel/threat_intel_indicator_match_email.toml`)
 - `3a657da0-1df2-11ef-a327-f661ea17fbcc` Rapid7 Threat Command CVEs Correlation (`rules/threat_intel/threat_intel_rapid7_threat_command.toml`)
-
-### `windows`
-
-未汉化 477 条：
-- `2856446a-34e6-435b-9fb5-f8f040bfa7ed` Account Discovery Command via SYSTEM Account (`rules/windows/discovery_command_system_account.toml`)
-- `0e42f920-047d-4568-b961-2a50db6c4713` Potential Persistence via Mandatory User Profile (`rules/windows/persistence_suspicious_user_mandatory_profile_file.toml`)
-- `93b22c0a-06a0-4131-b830-b10d5e166ff4` Suspicious SolarWinds Child Process (`rules/windows/execution_apt_solarwinds_backdoor_unusual_child_processes.toml`)
-- `57bc9e8d-9054-472c-9752-4aa91dc4cd49` Newly Observed RC4 Kerberos Service Ticket Request (`rules/windows/credential_access_kerberos_service_ticket_rc4.toml`)
-- `f63c8e3c-d396-404f-b2ea-0379d3942d73` Windows Firewall Disabled via PowerShell (`rules/windows/defense_evasion_powershell_windows_firewall_disabled.toml`)
-- `6ea41894-66c3-4df7-ad6b-2c5074eb3df8` Potential Windows Error Manager Masquerading (`rules/windows/defense_evasion_masquerading_werfault.toml`)
-- `9d110cb3-5f4b-4c9a-b9f5-53f0a1707ae9` Process Injection by the Microsoft Build Engine (`rules/windows/defense_evasion_injection_msbuild.toml`)
-- `2e0051cb-51f8-492f-9d90-174e16b5e96b` Potential File Transfer via Curl for Windows (`rules/windows/command_and_control_tool_transfer_via_curl.toml`)
-- `440e2db4-bc7f-4c96-a068-65b78da59bde` Startup Persistence by a Suspicious Process (`rules/windows/persistence_startup_folder_file_written_by_suspicious_process.toml`)
-- `e7357fec-6e9c-41b9-b93d-6e4fc40c7d47` Potential Windows Session Hijacking via CcmExec (`rules/windows/defense_evasion_sccm_scnotification_dll.toml`)
-- `14dab405-5dd9-450c-8106-72951af2391f` Office Test Registry Persistence (`rules/windows/persistence_msoffice_startup_registry.toml`)
-- `ac5a2759-5c34-440a-b0c4-51fe674611d6` Outlook Home Page Registry Modification (`rules/windows/command_and_control_outlook_home_page.toml`)
-- `5c6f4c58-b381-452a-8976-f1b1c6aa0def` First Time Seen Account Performing DCSync (`rules/windows/credential_access_dcsync_newterm_subjectuser.toml`)
-- `0859355c-0f08-4b43-8ff5-7d2a4789fc08` First Time Seen Removable Device (`rules/windows/initial_access_exfiltration_first_time_seen_usb.toml`)
-- `e8571d5f-bea1-46c2-9f56-998de2d3ed95` Service Control Spawned via Script Interpreter (`rules/windows/privilege_escalation_service_control_spawned_script_int.toml`)
-- `e3343ab9-4245-4715-b344-e11c56b0a47f` Process Activity via Compiled HTML File (`rules/windows/execution_via_compiled_html_file.toml`)
-- `d331bbe2-6db4-4941-80a5-8270db72eb61` Clearing Windows Event Logs (`rules/windows/defense_evasion_clearing_windows_event_logs.toml`)
-- `94a401ba-4fa2-455c-b7ae-b6e037afc0b7` Group Policy Discovery via Microsoft GPResult Utility (`rules/windows/discovery_group_policy_object_discovery.toml`)
-- `fc7c0fa4-8f03-4b3e-8336-c5feab0be022` UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (`rules/windows/privilege_escalation_uac_bypass_com_ieinstal.toml`)
-- `e26f042e-c590-4e82-8e05-41e81bd822ad` Suspicious .NET Reflection via PowerShell (`rules/windows/defense_evasion_posh_assembly_load.toml`)
-- `51ce96fb-9e52-4dad-b0ba-99b54440fc9a` Incoming DCOM Lateral Movement with MMC (`rules/windows/lateral_movement_dcom_mmc20.toml`)
-- `ad0d2742-9a49-11ec-8d6b-acde48001122` Signed Proxy Execution via MS Work Folders (`rules/windows/defense_evasion_workfolders_control_execution.toml`)
-- `dffbd37c-d4c5-46f8-9181-5afdd9172b4c` Potential privilege escalation via CVE-2022-38028 (`rules/windows/privilege_escalation_exploit_cve_202238028.toml`)
-- `edf8ee23-5ea7-4123-ba19-56b41e424ae3` ImageLoad via Windows Update Auto Update Client (`rules/windows/defense_evasion_execution_lolbas_wuauclt.toml`)
-- `4de76544-f0e5-486a-8f84-eae0b6063cdc` Disable Windows Event and Security Logs Using Built-in Tools (`rules/windows/defense_evasion_disabling_windows_logs.toml`)
-- `02a4576a-7480-4284-9327-548a806b5e48` Potential Credential Access via DuplicateHandle in LSASS (`rules/windows/credential_access_potential_lsa_memdump_via_mirrordump.toml`)
-- `ff18d24b-2ba6-4691-a17f-75c4380d0965` Suspicious JavaScript Execution via Deno (`rules/windows/execution_susp_javascript_via_deno.toml`)
-- `de9bd7e0-49e9-4e92-a64d-53ade2e66af1` Unusual Child Process from a System Virtual Process (`rules/windows/defense_evasion_unusual_system_vp_child_program.toml`)
-- `e9abe69b-1deb-4e19-ac4a-5d5ac00f72eb` Potential LSA Authentication Package Abuse (`rules/windows/privilege_escalation_lsa_auth_package.toml`)
-- `483c4daf-b0c6-49e0-adf3-0bfa93231d6b` Microsoft Exchange Server UM Spawning Suspicious Processes (`rules/windows/initial_access_suspicious_ms_exchange_process.toml`)
-- `afcce5ad-65de-4ed2-8516-5e093d3ac99a` Local Scheduled Task Creation (`rules/windows/persistence_local_scheduled_task_creation.toml`)
-- `7eb54028-ca72-4eb7-8185-b6864572347db` System File Ownership Change (`rules/windows/defense_evasion_modify_ownership_os_files.toml`)
-- `81fe9dc6-a2d7-4192-a2d8-eed98afc766a` PowerShell Suspicious Payload Encoded and Compressed (`rules/windows/defense_evasion_posh_compressed.toml`)
-- `35df0dd8-092d-4a83-88c1-5151a804f31b` Unusual Parent-Child Relationship (`rules/windows/privilege_escalation_unusual_parentchild_relationship.toml`)
-- `6a8ab9cc-4023-4d17-b5df-1a3e16882ce7` Unusual Service Host Child Process - Childless Service (`rules/windows/privilege_escalation_unusual_svchost_childproc_childless.toml`)
-- `9ccf3ce0-0057-440a-91f5-870c6ad39093` Command Shell Activity Started via RunDLL32 (`rules/windows/execution_command_shell_via_rundll32.toml`)
-- `1f0a69c0-3392-4adf-b7d5-6012fd292da8` Potential Antimalware Scan Interface Bypass via PowerShell (`rules/windows/defense_evasion_amsi_bypass_powershell.toml`)
-- `c4210e1c-64f2-4f48-b67e-b5a8ffe3aa14` Mounting Hidden or WebDav Remote Shares (`rules/windows/lateral_movement_mount_hidden_or_webdav_share_net.toml`)
-- `fb01d790-9f74-4e76-97dd-b4b0f7bf6435` Potential Masquerading as System32 DLL (`rules/windows/defense_evasion_masquerading_windows_dll.toml`)
-- `bb8dac47-0271-4000-b4e3-1bfc75eec5c4` First Time Seen RMM Signer Across the Environment (`rules/windows/command_and_control_new_terms_rmm_signer.toml`)
-- … 另有 437 条，用 `sync.py next --category windows` 查看
 
 ## 自定义 / 未匹配
 

@@ -1062,13 +1062,52 @@ def list_next(
     return rows[:limit]
 
 
-def export_ndjson(cfg: dict[str, Any], dest: Path) -> int:
+def category_matches(rec_cat: str, selected: list[str]) -> bool:
+    if not selected:
+        return True
+    cat = rec_cat or ""
+    for want in selected:
+        if cat == want or cat.startswith(want + "/"):
+            return True
+    return False
+
+
+def localized_category_counts(cfg: dict[str, Any]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for rec in load_localized(cfg).values():
+        cat = rec.get("category") or "unknown"
+        counts[cat] = counts.get(cat, 0) + 1
+    return dict(sorted(counts.items()))
+
+
+def default_pack_path(cfg: dict[str, Any], categories: list[str]) -> Path:
+    reports = reports_dir(cfg)
+    if not categories:
+        return reports / "kibana-import.ndjson"
+    slug = "-".join(c.replace("/", "_") for c in categories)
+    return reports / f"kibana-import-{slug}.ndjson"
+
+
+def export_ndjson(
+    cfg: dict[str, Any],
+    dest: Path,
+    categories: list[str] | None = None,
+) -> dict[str, int]:
     localized = load_localized(cfg)
     official = load_official_catalog(cfg)
+    selected = [c.strip() for c in (categories or []) if c.strip()]
+    by_cat: dict[str, int] = {}
     n = 0
     dest.parent.mkdir(parents=True, exist_ok=True)
     with dest.open("w", encoding="utf-8") as fh:
-        for rec in sorted(localized.values(), key=lambda r: (r.get("category") or "", r.get("rule_id") or "")):
+        rows = sorted(
+            localized.values(),
+            key=lambda r: (r.get("category") or "", r.get("rule_id") or ""),
+        )
+        for rec in rows:
+            cat = rec.get("category") or "unknown"
+            if not category_matches(cat, selected):
+                continue
             obj = rec.get("kibana_export")
             if not is_full_kibana_export(obj):
                 obj = build_kibana_payload(rec, official, cfg)
@@ -1076,7 +1115,8 @@ def export_ndjson(cfg: dict[str, Any], dest: Path) -> int:
             validate_kibana_rule(obj)
             fh.write(json.dumps(obj, ensure_ascii=False) + "\n")
             n += 1
-    return n
+            by_cat[cat] = by_cat.get(cat, 0) + 1
+    return {"total": n, **{f"cat:{k}": v for k, v in sorted(by_cat.items())}}
 
 
 def github_blob_url(relpath: str, commit: str) -> str:

@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 
 from siem_rules import (
+    default_pack_path,
     diff_catalog,
     export_ndjson,
     fetch_official,
@@ -19,6 +20,7 @@ from siem_rules import (
     load_config,
     load_localized,
     load_official_catalog,
+    localized_category_counts,
     record_official_zh,
     rewrite_localized_kibana,
     write_reports,
@@ -86,10 +88,48 @@ def cmd_record(cfg, rule_id: str, zh_json: Path) -> int:
     return 0
 
 
-def cmd_export(cfg, dest: Path) -> int:
-    n = export_ndjson(cfg, dest)
-    print(f"exported {n} rules -> {dest}")
+def _parse_categories(values: list[str] | None) -> list[str]:
+    out: list[str] = []
+    for raw in values or []:
+        for part in raw.split(","):
+            cat = part.strip()
+            if cat and cat not in out:
+                out.append(cat)
+    return out
+
+
+def cmd_pack(cfg, dest: Path | None, categories: list[str], list_only: bool) -> int:
+    counts = localized_category_counts(cfg)
+    if list_only or (not dest and not categories):
+        if not counts:
+            print("还没有可打包的汉化规则", file=sys.stderr)
+            return 1
+        print("# 已汉化分类（可 --category 多选）")
+        for cat, n in counts.items():
+            print(f"{cat}\t{n}")
+        print(f"# 合计\t{sum(counts.values())}")
+        return 0
+    known = set(counts)
+    top = {c.split("/", 1)[0] for c in known}
+    unknown = [c for c in categories if c not in known and c not in top]
+    if unknown:
+        print(f"没有这些分类的汉化记录: {', '.join(unknown)}", file=sys.stderr)
+        print("可用分类:", ", ".join(sorted(known)), file=sys.stderr)
+        return 1
+    path = dest or default_pack_path(cfg, categories)
+    stats = export_ndjson(cfg, path, categories)
+    total = stats.pop("total", 0)
+    if total == 0:
+        print("选中分类没有可导出规则", file=sys.stderr)
+        return 1
+    print(f"packed {total} rules -> {path}")
+    for key, n in stats.items():
+        print(f"  {key.removeprefix('cat:')}\t{n}")
     return 0
+
+
+def cmd_export(cfg, dest: Path, categories: list[str]) -> int:
+    return cmd_pack(cfg, dest, categories, list_only=False)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -110,8 +150,25 @@ def build_parser() -> argparse.ArgumentParser:
     r = sub.add_parser("record", help="把一条已汉化官方规则写入 localized/")
     r.add_argument("rule_id")
     r.add_argument("zh_json", type=Path, help="含 name/description/note/tags/setup/false_positives/investigation_fields")
-    e = sub.add_parser("export-ndjson", help="合并可导入的检测规则 ndjson")
+    e = sub.add_parser("export-ndjson", help="合并可导入的检测规则 ndjson（可用 --category 过滤）")
     e.add_argument("-o", "--output", type=Path, required=True)
+    e.add_argument(
+        "-c",
+        "--category",
+        action="append",
+        default=[],
+        help="分类，可重复或逗号分隔，如 linux 或 linux,windows,custom；integrations 含其下子目录",
+    )
+    pk = sub.add_parser("pack", help="按单个或多个分类打包成一份 Kibana 导入 ndjson")
+    pk.add_argument("-o", "--output", type=Path, help="默认 reports/kibana-import-<分类>.ndjson")
+    pk.add_argument(
+        "-c",
+        "--category",
+        action="append",
+        default=[],
+        help="分类，可重复或逗号分隔；省略且不指定 -o 时列出已汉化分类",
+    )
+    pk.add_argument("--list", action="store_true", help="只列出已汉化分类和条数")
     sub.add_parser("rebuild", help="把汉化记录重写成 Kibana 可导入的检测规则 ndjson")
     return p
 
@@ -130,7 +187,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "record":
         return cmd_record(cfg, args.rule_id, args.zh_json)
     if args.cmd == "export-ndjson":
-        return cmd_export(cfg, args.output)
+        return cmd_export(cfg, args.output, _parse_categories(args.category))
+    if args.cmd == "pack":
+        return cmd_pack(cfg, args.output, _parse_categories(args.category), list_only=args.list)
     if args.cmd == "rebuild":
         stats = rewrite_localized_kibana(cfg)
         print(json.dumps({k: v for k, v in stats.items() if k != "errors"}, ensure_ascii=False))
